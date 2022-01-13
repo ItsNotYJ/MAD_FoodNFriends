@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		1987C6AC2790643100C72807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6AB2790643100C72807 /* AppDelegate.swift */; };
 		1987C6AE2790643100C72807 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6AD2790643100C72807 /* SceneDelegate.swift */; };
-		1987C6B02790643100C72807 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6AF2790643100C72807 /* ViewController.swift */; };
-		1987C6B32790643100C72807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1987C6B12790643100C72807 /* Main.storyboard */; };
+		1987C6B02790643100C72807 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6AF2790643100C72807 /* LoginViewController.swift */; };
 		1987C6B62790643100C72807 /* FoodNFriends.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6B42790643100C72807 /* FoodNFriends.xcdatamodeld */; };
 		1987C6B82790643100C72807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1987C6B72790643100C72807 /* Assets.xcassets */; };
 		1987C6BB2790643100C72807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1987C6B92790643100C72807 /* LaunchScreen.storyboard */; };
+		A92B4DDF2790836D0006C303 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DDE2790836D0006C303 /* User.swift */; };
+		A92B4DE12790851A0006C303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92B4DE02790851A0006C303 /* Main.storyboard */; };
+		A92B4DE32790868D0006C303 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DE22790868D0006C303 /* RegisterViewController.swift */; };
+		A92B4DE6279086F70006C303 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92B4DE5279086F70006C303 /* Content.storyboard */; };
+		A92B4DEA2790876C0006C303 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DE92790876C0006C303 /* RoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1987C6A82790643100C72807 /* FoodNFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1987C6AB2790643100C72807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1987C6AD2790643100C72807 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1987C6AF2790643100C72807 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1987C6B22790643100C72807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1987C6AF2790643100C72807 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1987C6B52790643100C72807 /* FoodNFriends.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodNFriends.xcdatamodel; sourceTree = "<group>"; };
 		1987C6B72790643100C72807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1987C6BA2790643100C72807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1987C6BC2790643100C72807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A92B4DDE2790836D0006C303 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A92B4DE02790851A0006C303 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A92B4DE22790868D0006C303 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A92B4DE5279086F70006C303 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
+		A92B4DE92790876C0006C303 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,44 @@
 		1987C6AA2790643100C72807 /* FoodNFriends */ = {
 			isa = PBXGroup;
 			children = (
+				A92B4DE4279086EA0006C303 /* Storyboard */,
+				A92B4DDC27907A070006C303 /* Class */,
+				A92B4DD9279079600006C303 /* ViewController */,
 				1987C6AB2790643100C72807 /* AppDelegate.swift */,
 				1987C6AD2790643100C72807 /* SceneDelegate.swift */,
-				1987C6AF2790643100C72807 /* ViewController.swift */,
-				1987C6B12790643100C72807 /* Main.storyboard */,
 				1987C6B72790643100C72807 /* Assets.xcassets */,
 				1987C6B92790643100C72807 /* LaunchScreen.storyboard */,
 				1987C6BC2790643100C72807 /* Info.plist */,
 				1987C6B42790643100C72807 /* FoodNFriends.xcdatamodeld */,
 			);
 			path = FoodNFriends;
+			sourceTree = "<group>";
+		};
+		A92B4DD9279079600006C303 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1987C6AF2790643100C72807 /* LoginViewController.swift */,
+				A92B4DE22790868D0006C303 /* RegisterViewController.swift */,
+				A92B4DE92790876C0006C303 /* RoomViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A92B4DDC27907A070006C303 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				A92B4DDE2790836D0006C303 /* User.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		A92B4DE4279086EA0006C303 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A92B4DE02790851A0006C303 /* Main.storyboard */,
+				A92B4DE5279086F70006C303 /* Content.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +164,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92B4DE6279086F70006C303 /* Content.storyboard in Resources */,
+				A92B4DE12790851A0006C303 /* Main.storyboard in Resources */,
 				1987C6BB2790643100C72807 /* LaunchScreen.storyboard in Resources */,
 				1987C6B82790643100C72807 /* Assets.xcassets in Resources */,
-				1987C6B32790643100C72807 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1987C6B02790643100C72807 /* ViewController.swift in Sources */,
+				1987C6B02790643100C72807 /* LoginViewController.swift in Sources */,
 				1987C6AC2790643100C72807 /* AppDelegate.swift in Sources */,
+				A92B4DEA2790876C0006C303 /* RoomViewController.swift in Sources */,
 				1987C6B62790643100C72807 /* FoodNFriends.xcdatamodeld in Sources */,
+				A92B4DE32790868D0006C303 /* RegisterViewController.swift in Sources */,
+				A92B4DDF2790836D0006C303 /* User.swift in Sources */,
 				1987C6AE2790643100C72807 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1987C6B12790643100C72807 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1987C6B22790643100C72807 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1987C6B92790643100C72807 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -301,6 +333,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,6 +362,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
