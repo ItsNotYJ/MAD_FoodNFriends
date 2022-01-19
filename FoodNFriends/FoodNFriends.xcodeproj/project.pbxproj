@@ -24,6 +24,7 @@
 		A963211027986E7B00140EF0 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A963210F27986E7B00140EF0 /* FirebaseDatabase */; };
 		A963211227986E7B00140EF0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A963211127986E7B00140EF0 /* FirebaseStorage */; };
 		A963211427986F8700140EF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A963211327986F8700140EF0 /* GoogleService-Info.plist */; };
+		A9632116279874D500140EF0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9632115279874D500140EF0 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		A92B4DE5279086F70006C303 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 		A92B4DE92790876C0006C303 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		A963211327986F8700140EF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A9632115279874D500140EF0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				1987C6AF2790643100C72807 /* LoginViewController.swift */,
 				A92B4DE22790868D0006C303 /* RegisterViewController.swift */,
 				A92B4DE92790876C0006C303 /* RoomViewController.swift */,
+				A9632115279874D500140EF0 /* SettingsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				1987C6B02790643100C72807 /* LoginViewController.swift in Sources */,
 				1987C6AC2790643100C72807 /* AppDelegate.swift in Sources */,
 				19910A7D279863CC006BFB61 /* HawkerCentreViewController.swift in Sources */,
+				A9632116279874D500140EF0 /* SettingsViewController.swift in Sources */,
 				A92B4DEA2790876C0006C303 /* RoomViewController.swift in Sources */,
 				19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */,
 				1987C6B62790643100C72807 /* FoodNFriends.xcdatamodeld in Sources */,

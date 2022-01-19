@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,15 +61,35 @@
             </objects>
             <point key="canvasLocation" x="1000.0000000000001" y="60.9375"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="AKl-2V-PdW">
             <objects>
-                <viewController id="vjW-hK-7Px" sceneMemberID="viewController">
+                <viewController id="vjW-hK-7Px" customClass="SettingsViewController" customModule="FoodNFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1LK-BJ-r3q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwC-F8-wKO">
+                                <rect key="frame" x="50" y="713" width="314" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KGP-G4-1WI"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutBtn:" destination="vjW-hK-7Px" eventType="touchUpInside" id="EdU-tM-uf4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9Id-hY-3AH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Id-hY-3AH" firstAttribute="trailing" secondItem="qwC-F8-wKO" secondAttribute="trailing" constant="50" id="4cG-P8-WLO"/>
+                            <constraint firstItem="9Id-hY-3AH" firstAttribute="bottom" secondItem="qwC-F8-wKO" secondAttribute="bottom" constant="50" id="50Y-Kb-cdO"/>
+                            <constraint firstItem="qwC-F8-wKO" firstAttribute="leading" secondItem="9Id-hY-3AH" secondAttribute="leading" constant="50" id="9jT-nm-olH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RBh-tJ-9aO"/>
                 </viewController>
@@ -82,6 +103,7 @@
                 <tabBarController storyboardIdentifier="Content" automaticallyAdjustsScrollViewInsets="NO" id="Pc9-Mk-a20" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2zC-oj-Za5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -115,6 +137,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
