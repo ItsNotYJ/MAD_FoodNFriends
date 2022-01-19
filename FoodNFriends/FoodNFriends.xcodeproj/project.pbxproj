@@ -66,9 +66,12 @@
 		1987C6AA2790643100C72807 /* FoodNFriends */ = {
 			isa = PBXGroup;
 			children = (
-				A92B4DE4279086EA0006C303 /* Storyboard */,
-				A92B4DDC27907A070006C303 /* Class */,
-				A92B4DD9279079600006C303 /* ViewController */,
+				1987C6AF2790643100C72807 /* LoginViewController.swift */,
+				A92B4DE22790868D0006C303 /* RegisterViewController.swift */,
+				A92B4DE92790876C0006C303 /* RoomViewController.swift */,
+				A92B4DDE2790836D0006C303 /* User.swift */,
+				A92B4DE02790851A0006C303 /* Main.storyboard */,
+				A92B4DE5279086F70006C303 /* Content.storyboard */,
 				1987C6AB2790643100C72807 /* AppDelegate.swift */,
 				1987C6AD2790643100C72807 /* SceneDelegate.swift */,
 				1987C6B72790643100C72807 /* Assets.xcassets */,
@@ -77,33 +80,6 @@
 				1987C6B42790643100C72807 /* FoodNFriends.xcdatamodeld */,
 			);
 			path = FoodNFriends;
-			sourceTree = "<group>";
-		};
-		A92B4DD9279079600006C303 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				1987C6AF2790643100C72807 /* LoginViewController.swift */,
-				A92B4DE22790868D0006C303 /* RegisterViewController.swift */,
-				A92B4DE92790876C0006C303 /* RoomViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		A92B4DDC27907A070006C303 /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				A92B4DDE2790836D0006C303 /* User.swift */,
-			);
-			path = Class;
-			sourceTree = "<group>";
-		};
-		A92B4DE4279086EA0006C303 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				A92B4DE02790851A0006C303 /* Main.storyboard */,
-				A92B4DE5279086F70006C303 /* Content.storyboard */,
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
