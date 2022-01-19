@@ -20,6 +20,10 @@
 		A92B4DE32790868D0006C303 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DE22790868D0006C303 /* RegisterViewController.swift */; };
 		A92B4DE6279086F70006C303 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92B4DE5279086F70006C303 /* Content.storyboard */; };
 		A92B4DEA2790876C0006C303 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DE92790876C0006C303 /* RoomViewController.swift */; };
+		A963210E27986E7B00140EF0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A963210D27986E7B00140EF0 /* FirebaseAuth */; };
+		A963211027986E7B00140EF0 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A963210F27986E7B00140EF0 /* FirebaseDatabase */; };
+		A963211227986E7B00140EF0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A963211127986E7B00140EF0 /* FirebaseStorage */; };
+		A963211427986F8700140EF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A963211327986F8700140EF0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,7 @@
 		A92B4DE22790868D0006C303 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A92B4DE5279086F70006C303 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 		A92B4DE92790876C0006C303 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		A963211327986F8700140EF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A963211027986E7B00140EF0 /* FirebaseDatabase in Frameworks */,
+				A963210E27986E7B00140EF0 /* FirebaseAuth in Frameworks */,
+				A963211227986E7B00140EF0 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,14 +78,10 @@
 		1987C6AA2790643100C72807 /* FoodNFriends */ = {
 			isa = PBXGroup;
 			children = (
-				19910A7C279863CC006BFB61 /* HawkerCentreViewController.swift */,
-				1987C6AF2790643100C72807 /* LoginViewController.swift */,
-				A92B4DE22790868D0006C303 /* RegisterViewController.swift */,
-				A92B4DE92790876C0006C303 /* RoomViewController.swift */,
-				A92B4DDE2790836D0006C303 /* User.swift */,
-				19910A7E279863F8006BFB61 /* HawkerCentre.swift */,
-				A92B4DE02790851A0006C303 /* Main.storyboard */,
-				A92B4DE5279086F70006C303 /* Content.storyboard */,
+				A963211327986F8700140EF0 /* GoogleService-Info.plist */,
+				A963210B27986CBC00140EF0 /* Storyboard */,
+				A963210A27986CA900140EF0 /* Class */,
+				A963210927986C9900140EF0 /* ViewController */,
 				1987C6AB2790643100C72807 /* AppDelegate.swift */,
 				1987C6AD2790643100C72807 /* SceneDelegate.swift */,
 				1987C6B72790643100C72807 /* Assets.xcassets */,
@@ -86,6 +90,35 @@
 				1987C6B42790643100C72807 /* FoodNFriends.xcdatamodeld */,
 			);
 			path = FoodNFriends;
+			sourceTree = "<group>";
+		};
+		A963210927986C9900140EF0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				19910A7C279863CC006BFB61 /* HawkerCentreViewController.swift */,
+				1987C6AF2790643100C72807 /* LoginViewController.swift */,
+				A92B4DE22790868D0006C303 /* RegisterViewController.swift */,
+				A92B4DE92790876C0006C303 /* RoomViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A963210A27986CA900140EF0 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				A92B4DDE2790836D0006C303 /* User.swift */,
+				19910A7E279863F8006BFB61 /* HawkerCentre.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		A963210B27986CBC00140EF0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A92B4DE02790851A0006C303 /* Main.storyboard */,
+				A92B4DE5279086F70006C303 /* Content.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +137,11 @@
 			dependencies = (
 			);
 			name = FoodNFriends;
+			packageProductDependencies = (
+				A963210D27986E7B00140EF0 /* FirebaseAuth */,
+				A963210F27986E7B00140EF0 /* FirebaseDatabase */,
+				A963211127986E7B00140EF0 /* FirebaseStorage */,
+			);
 			productName = FoodNFriends;
 			productReference = 1987C6A82790643100C72807 /* FoodNFriends.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 1987C69F2790643100C72807;
+			packageReferences = (
+				A963210C27986E7B00140EF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 1987C6A92790643100C72807 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,6 +189,7 @@
 			files = (
 				A92B4DE6279086F70006C303 /* Content.storyboard in Resources */,
 				A92B4DE12790851A0006C303 /* Main.storyboard in Resources */,
+				A963211427986F8700140EF0 /* GoogleService-Info.plist in Resources */,
 				1987C6BB2790643100C72807 /* LaunchScreen.storyboard in Resources */,
 				1987C6B82790643100C72807 /* Assets.xcassets in Resources */,
 			);
@@ -382,6 +424,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A963210C27986E7B00140EF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A963210D27986E7B00140EF0 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A963210C27986E7B00140EF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A963210F27986E7B00140EF0 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A963210C27986E7B00140EF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		A963211127986E7B00140EF0 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A963210C27986E7B00140EF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1987C6B42790643100C72807 /* FoodNFriends.xcdatamodeld */ = {

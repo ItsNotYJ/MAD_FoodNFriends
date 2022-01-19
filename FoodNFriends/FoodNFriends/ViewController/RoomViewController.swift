@@ -15,7 +15,7 @@ class RoomViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelTxt.text = AppDelegate.userName
+        labelTxt.text = AppDelegate.emailRef
     }
     
 }
