@@ -12,6 +12,10 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // To store one instance of the Hawker Centre List because the data is fixed and will never change
+    var hawkerCentreList: [HawkerCentre] = []
+    var hawkerCentreIndex: Int?
+    
     static var emailRef = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
