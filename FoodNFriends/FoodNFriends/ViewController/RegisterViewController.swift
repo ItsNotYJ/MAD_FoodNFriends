@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController{
     
@@ -22,7 +23,6 @@ class RegisterViewController: UIViewController{
         super.viewDidLoad()
         passwordTxt.isSecureTextEntry = true
         cfmPasswordTxt.isSecureTextEntry = true
-
     }
     
     @IBAction func registerBtn(_ sender: Any) {
@@ -51,6 +51,16 @@ class RegisterViewController: UIViewController{
                             self.present(alert, animated: true)
                             return
                         }
+                        //replacing email characters
+                        let email = self.emailTxt.text!
+                        let emailnew = email.replacingOccurrences(of: "@", with: "-")
+                        let emailnewer = emailnew.replacingOccurrences(of: ".", with: "_")
+                        
+                        //creating dictionary for firebase
+                        let Users : [String : String] = ["Username" : self.usernameTxt.text!]
+                        
+                        let databaseRef = Database.database().reference()
+                        databaseRef.child("Users").child(emailnewer).setValue(Users)
                         let alert = UIAlertController(title: "Account Created Successfully", message: "Welcome to FoodNFriends", preferredStyle: .alert)
 
                         alert.addAction(UIAlertAction(title: "Continue  ", style: .default, handler: {(action:UIAlertAction) in
