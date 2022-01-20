@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var hawkerCentreList: [HawkerCentre] = []
     var hawkerCentreIndex: Int?
     
+    var roomList:[Room] = []
+    var locationList:[Location] = []
+    
+    
     static var emailRef = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

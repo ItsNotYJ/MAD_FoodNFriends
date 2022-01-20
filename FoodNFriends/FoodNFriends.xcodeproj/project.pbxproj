@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EB8F1362799CF720094906F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F1352799CF720094906F /* Comment.swift */; };
+		0EB8F1382799CF870094906F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F1372799CF870094906F /* Location.swift */; };
+		0EB8F13A2799CF9A0094906F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F1392799CF990094906F /* Room.swift */; };
+		0EB8F13C2799CFC00094906F /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F13B2799CFBF0094906F /* RoomTableViewController.swift */; };
+		0EB8F13E2799CFDF0094906F /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F13D2799CFDF0094906F /* LocationTableViewController.swift */; };
+		0EB8F1402799D2600094906F /* RoomContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8F13F2799D2600094906F /* RoomContent.storyboard */; };
 		1987C6AC2790643100C72807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6AB2790643100C72807 /* AppDelegate.swift */; };
 		1987C6AE2790643100C72807 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6AD2790643100C72807 /* SceneDelegate.swift */; };
 		1987C6B02790643100C72807 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6AF2790643100C72807 /* LoginViewController.swift */; };
@@ -16,11 +22,9 @@
 		19910A7D279863CC006BFB61 /* HawkerCentreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */; };
 		19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19910A7E279863F8006BFB61 /* HawkerCentre.swift */; };
 		1997DC3827999EAE00565A2B /* HawkerCentreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */; };
-		A92B4DDF2790836D0006C303 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DDE2790836D0006C303 /* User.swift */; };
 		A92B4DE12790851A0006C303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92B4DE02790851A0006C303 /* Main.storyboard */; };
 		A92B4DE32790868D0006C303 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DE22790868D0006C303 /* RegisterViewController.swift */; };
 		A92B4DE6279086F70006C303 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92B4DE5279086F70006C303 /* Content.storyboard */; };
-		A92B4DEA2790876C0006C303 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DE92790876C0006C303 /* RoomViewController.swift */; };
 		A963210E27986E7B00140EF0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A963210D27986E7B00140EF0 /* FirebaseAuth */; };
 		A963211027986E7B00140EF0 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A963210F27986E7B00140EF0 /* FirebaseDatabase */; };
 		A963211227986E7B00140EF0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A963211127986E7B00140EF0 /* FirebaseStorage */; };
@@ -29,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EB8F1352799CF720094906F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		0EB8F1372799CF870094906F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		0EB8F1392799CF990094906F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		0EB8F13B2799CFBF0094906F /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
+		0EB8F13D2799CFDF0094906F /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
+		0EB8F13F2799D2600094906F /* RoomContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoomContent.storyboard; sourceTree = "<group>"; };
 		1987C6A82790643100C72807 /* FoodNFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1987C6AB2790643100C72807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1987C6AD2790643100C72807 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,11 +50,9 @@
 		19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentreTableViewController.swift; sourceTree = "<group>"; };
 		19910A7E279863F8006BFB61 /* HawkerCentre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentre.swift; sourceTree = "<group>"; };
 		1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentreViewController.swift; sourceTree = "<group>"; };
-		A92B4DDE2790836D0006C303 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A92B4DE02790851A0006C303 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A92B4DE22790868D0006C303 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A92B4DE5279086F70006C303 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
-		A92B4DE92790876C0006C303 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		A9632115279874D500140EF0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A96321192799AE8B00140EF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,10 +109,11 @@
 			children = (
 				1987C6AF2790643100C72807 /* LoginViewController.swift */,
 				A92B4DE22790868D0006C303 /* RegisterViewController.swift */,
-				A92B4DE92790876C0006C303 /* RoomViewController.swift */,
 				A9632115279874D500140EF0 /* SettingsViewController.swift */,
 				1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */,
 				19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */,
+				0EB8F13B2799CFBF0094906F /* RoomTableViewController.swift */,
+				0EB8F13D2799CFDF0094906F /* LocationTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -112,8 +121,10 @@
 		A963210A27986CA900140EF0 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				A92B4DDE2790836D0006C303 /* User.swift */,
 				19910A7E279863F8006BFB61 /* HawkerCentre.swift */,
+				0EB8F1352799CF720094906F /* Comment.swift */,
+				0EB8F1372799CF870094906F /* Location.swift */,
+				0EB8F1392799CF990094906F /* Room.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 			children = (
 				A92B4DE02790851A0006C303 /* Main.storyboard */,
 				A92B4DE5279086F70006C303 /* Content.storyboard */,
+				0EB8F13F2799D2600094906F /* RoomContent.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -196,6 +208,7 @@
 				A92B4DE6279086F70006C303 /* Content.storyboard in Resources */,
 				A92B4DE12790851A0006C303 /* Main.storyboard in Resources */,
 				A963211A2799AE8B00140EF0 /* GoogleService-Info.plist in Resources */,
+				0EB8F1402799D2600094906F /* RoomContent.storyboard in Resources */,
 				1987C6BB2790643100C72807 /* LaunchScreen.storyboard in Resources */,
 				1987C6B82790643100C72807 /* Assets.xcassets in Resources */,
 			);
@@ -213,11 +226,14 @@
 				19910A7D279863CC006BFB61 /* HawkerCentreTableViewController.swift in Sources */,
 				A9632116279874D500140EF0 /* SettingsViewController.swift in Sources */,
 				1997DC3827999EAE00565A2B /* HawkerCentreViewController.swift in Sources */,
-				A92B4DEA2790876C0006C303 /* RoomViewController.swift in Sources */,
+				0EB8F13A2799CF9A0094906F /* Room.swift in Sources */,
 				19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */,
+				0EB8F13E2799CFDF0094906F /* LocationTableViewController.swift in Sources */,
+				0EB8F13C2799CFC00094906F /* RoomTableViewController.swift in Sources */,
 				1987C6B62790643100C72807 /* FoodNFriends.xcdatamodeld in Sources */,
 				A92B4DE32790868D0006C303 /* RegisterViewController.swift in Sources */,
-				A92B4DDF2790836D0006C303 /* User.swift in Sources */,
+				0EB8F1362799CF720094906F /* Comment.swift in Sources */,
+				0EB8F1382799CF870094906F /* Location.swift in Sources */,
 				1987C6AE2790643100C72807 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
