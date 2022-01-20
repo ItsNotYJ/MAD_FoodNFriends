@@ -47,6 +47,9 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="S1J-1Y-7Zx" kind="show" id="duI-Cf-KhL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -59,6 +62,131 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKy-pe-bt4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1910.144927536232" y="-646.875"/>
+        </scene>
+        <!--Hawker Centre View Controller-->
+        <scene sceneID="VZX-S4-hlB">
+            <objects>
+                <viewController id="S1J-1Y-7Zx" customClass="HawkerCentreViewController" customModule="FoodNFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ukp-dA-ep4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UIq-mt-Tfi">
+                                <rect key="frame" x="15" y="98" width="384" height="448"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hawker Centre Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUs-QV-q2P">
+                                <rect key="frame" x="15" y="561" width="384" height="30"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2W-Gp-bGS">
+                                <rect key="frame" x="15" y="606" width="48.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data is loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ji0-IT-I3U">
+                                <rect key="frame" x="78.5" y="606" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data is loading..." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSO-c2-aGV">
+                                <rect key="frame" x="110" y="642" width="289" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ4-Zb-RQu">
+                                <rect key="frame" x="15" y="642" width="77.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postal Code:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foJ-TH-O8l">
+                                <rect key="frame" x="15" y="677.5" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hawker Stalls" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acU-gy-asT">
+                                <rect key="frame" x="75" y="743.5" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Market Stalls" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXg-FB-RC0">
+                                <rect key="frame" x="226" y="742.5" width="113" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOg-Ev-uHH">
+                                <rect key="frame" x="123" y="779.5" width="13" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnP-py-Gj2">
+                                <rect key="frame" x="278" y="779.5" width="13" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data is loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvi-Lt-6S1">
+                                <rect key="frame" x="139" y="677.5" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WOa-nh-HBu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WOa-nh-HBu" firstAttribute="trailing" secondItem="UIq-mt-Tfi" secondAttribute="trailing" constant="15" id="02q-Uo-db5"/>
+                            <constraint firstItem="qvi-Lt-6S1" firstAttribute="leading" secondItem="foJ-TH-O8l" secondAttribute="trailing" constant="15" id="0he-OT-xJM"/>
+                            <constraint firstItem="qvi-Lt-6S1" firstAttribute="top" secondItem="WSO-c2-aGV" secondAttribute="bottom" constant="15" id="2QA-cc-x7W"/>
+                            <constraint firstItem="LUs-QV-q2P" firstAttribute="top" secondItem="UIq-mt-Tfi" secondAttribute="bottom" constant="15" id="AEp-HE-2e7"/>
+                            <constraint firstItem="i2W-Gp-bGS" firstAttribute="top" secondItem="LUs-QV-q2P" secondAttribute="bottom" constant="15" id="Bfi-Kv-bCo"/>
+                            <constraint firstItem="uJ4-Zb-RQu" firstAttribute="top" secondItem="i2W-Gp-bGS" secondAttribute="bottom" constant="15" id="C5l-Kw-RIE"/>
+                            <constraint firstAttribute="bottom" secondItem="cnP-py-Gj2" secondAttribute="bottom" constant="90" id="Eed-cY-0jh"/>
+                            <constraint firstItem="WOa-nh-HBu" firstAttribute="trailing" secondItem="cnP-py-Gj2" secondAttribute="trailing" constant="123" id="Fcs-pk-Mx5"/>
+                            <constraint firstItem="WOa-nh-HBu" firstAttribute="trailing" secondItem="FXg-FB-RC0" secondAttribute="trailing" constant="75" id="GSX-t8-4l2"/>
+                            <constraint firstItem="WOa-nh-HBu" firstAttribute="trailing" secondItem="LUs-QV-q2P" secondAttribute="trailing" constant="15" id="I7X-N5-Ckm"/>
+                            <constraint firstItem="WOa-nh-HBu" firstAttribute="trailing" secondItem="WSO-c2-aGV" secondAttribute="trailing" constant="15" id="JdN-Cy-tQj"/>
+                            <constraint firstAttribute="bottom" secondItem="qOg-Ev-uHH" secondAttribute="bottom" constant="90" id="Jfu-X3-xD4"/>
+                            <constraint firstItem="acU-gy-asT" firstAttribute="top" secondItem="foJ-TH-O8l" secondAttribute="bottom" constant="45" id="K7G-mD-rqn"/>
+                            <constraint firstItem="UIq-mt-Tfi" firstAttribute="top" secondItem="WOa-nh-HBu" secondAttribute="top" constant="10" id="M8y-SD-4K9"/>
+                            <constraint firstItem="ji0-IT-I3U" firstAttribute="top" secondItem="LUs-QV-q2P" secondAttribute="bottom" constant="15" id="RAg-vY-v3y"/>
+                            <constraint firstItem="foJ-TH-O8l" firstAttribute="leading" secondItem="WOa-nh-HBu" secondAttribute="leading" constant="15" id="Rab-1p-r9o"/>
+                            <constraint firstItem="qOg-Ev-uHH" firstAttribute="top" secondItem="acU-gy-asT" secondAttribute="bottom" constant="15" id="SGW-az-cOH"/>
+                            <constraint firstItem="foJ-TH-O8l" firstAttribute="top" secondItem="WSO-c2-aGV" secondAttribute="bottom" constant="15" id="Sap-zL-toM"/>
+                            <constraint firstItem="i2W-Gp-bGS" firstAttribute="leading" secondItem="WOa-nh-HBu" secondAttribute="leading" constant="15" id="TA4-8o-wnW"/>
+                            <constraint firstItem="acU-gy-asT" firstAttribute="leading" secondItem="WOa-nh-HBu" secondAttribute="leading" constant="75" id="USp-Oe-DOI"/>
+                            <constraint firstItem="cnP-py-Gj2" firstAttribute="top" secondItem="FXg-FB-RC0" secondAttribute="bottom" constant="15" id="ehN-Du-r6t"/>
+                            <constraint firstItem="LUs-QV-q2P" firstAttribute="leading" secondItem="WOa-nh-HBu" secondAttribute="leading" constant="15" id="hco-9R-Jwo"/>
+                            <constraint firstItem="uJ4-Zb-RQu" firstAttribute="leading" secondItem="WOa-nh-HBu" secondAttribute="leading" constant="15" id="qSo-ta-8Ux"/>
+                            <constraint firstItem="qOg-Ev-uHH" firstAttribute="leading" secondItem="WOa-nh-HBu" secondAttribute="leading" constant="123" id="t6S-sG-V5J"/>
+                            <constraint firstItem="WSO-c2-aGV" firstAttribute="leading" secondItem="WOa-nh-HBu" secondAttribute="leading" constant="110" id="uY4-Sr-lRD"/>
+                            <constraint firstItem="WSO-c2-aGV" firstAttribute="top" secondItem="ji0-IT-I3U" secondAttribute="bottom" constant="15" id="vFf-kh-hfk"/>
+                            <constraint firstItem="UIq-mt-Tfi" firstAttribute="leading" secondItem="WOa-nh-HBu" secondAttribute="leading" constant="15" id="xPX-MY-lAo"/>
+                            <constraint firstItem="ji0-IT-I3U" firstAttribute="leading" secondItem="i2W-Gp-bGS" secondAttribute="trailing" constant="15" id="zG5-SO-LrO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="I6r-aV-5Fj"/>
+                    <connections>
+                        <outlet property="hawkerAddr" destination="WSO-c2-aGV" id="Jc4-4p-bYr"/>
+                        <outlet property="hawkerName" destination="LUs-QV-q2P" id="QRe-o1-g4M"/>
+                        <outlet property="hawkerStalls" destination="qOg-Ev-uHH" id="jbc-aM-YwB"/>
+                        <outlet property="hawkerType" destination="ji0-IT-I3U" id="h0B-oN-kZJ"/>
+                        <outlet property="marketStalls" destination="cnP-py-Gj2" id="yO9-1a-Ib8"/>
+                        <outlet property="postalCode" destination="qvi-Lt-6S1" id="QTd-T3-jeH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eag-W3-YZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2819" y="-648"/>
         </scene>
         <!--Room View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -214,6 +342,12 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

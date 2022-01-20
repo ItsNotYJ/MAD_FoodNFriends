@@ -16,6 +16,7 @@
 		19910A7D279863CC006BFB61 /* HawkerCentreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */; };
 		19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19910A7E279863F8006BFB61 /* HawkerCentre.swift */; };
 		1997DC3627999DF300565A2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1997DC3527999DF300565A2B /* GoogleService-Info.plist */; };
+		1997DC3827999EAE00565A2B /* HawkerCentreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */; };
 		A92B4DDF2790836D0006C303 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DDE2790836D0006C303 /* User.swift */; };
 		A92B4DE12790851A0006C303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92B4DE02790851A0006C303 /* Main.storyboard */; };
 		A92B4DE32790868D0006C303 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DE22790868D0006C303 /* RegisterViewController.swift */; };
@@ -39,6 +40,7 @@
 		19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentreTableViewController.swift; sourceTree = "<group>"; };
 		19910A7E279863F8006BFB61 /* HawkerCentre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentre.swift; sourceTree = "<group>"; };
 		1997DC3527999DF300565A2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Backup Copy/FoodNFriends2/FoodNFriends/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentreViewController.swift; sourceTree = "<group>"; };
 		A92B4DDE2790836D0006C303 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A92B4DE02790851A0006C303 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A92B4DE22790868D0006C303 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				A92B4DE22790868D0006C303 /* RegisterViewController.swift */,
 				A92B4DE92790876C0006C303 /* RoomViewController.swift */,
 				A9632115279874D500140EF0 /* SettingsViewController.swift */,
+				1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */,
 				19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */,
 			);
 			path = ViewController;
@@ -209,6 +212,7 @@
 				1987C6AC2790643100C72807 /* AppDelegate.swift in Sources */,
 				19910A7D279863CC006BFB61 /* HawkerCentreTableViewController.swift in Sources */,
 				A9632116279874D500140EF0 /* SettingsViewController.swift in Sources */,
+				1997DC3827999EAE00565A2B /* HawkerCentreViewController.swift in Sources */,
 				A92B4DEA2790876C0006C303 /* RoomViewController.swift in Sources */,
 				19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */,
 				1987C6B62790643100C72807 /* FoodNFriends.xcdatamodeld in Sources */,
