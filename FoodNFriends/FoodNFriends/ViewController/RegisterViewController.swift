@@ -13,6 +13,12 @@ import FirebaseDatabase
 class RegisterViewController: UIViewController{
     
     let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+    
+    private let database = Database.database().reference()
+    
+    let fireBase:FirebaseDAL = FirebaseDAL()
+    
+    
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var cfmPasswordTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
@@ -68,10 +74,44 @@ class RegisterViewController: UIViewController{
                             let storyboard = UIStoryboard(name: "Content", bundle: nil)
                             let vc = storyboard.instantiateViewController(withIdentifier: "Content") as UIViewController
                             vc.modalPresentationStyle = .fullScreen
+                            
+                            
+                            var roomIDList:[String] = []
+                            
+                            
+                            
+                            self.database.child("Users").child(emailnewer).observeSingleEvent(of: .value, with: {snapshot in
+                                let userData = snapshot.value as? [String:Any]
+                                
+                                
+                                
+                                
+                                if userData!["RoomList"] == nil {
+                                    print("error")
+                                }
+                                else
+                                {
+                                    let roomlist = userData!["RoomList"] as! NSArray
+                                    
+                                    
+                                    for roomid in roomlist
+                                    {
+                                        
+                                        roomIDList.append((roomid as? String)!)
+                                    }
+                                    
+                                }
+                                
+                                for roomid in roomIDList
+                                {
+                                    
+                                    self.fireBase.loadFromFireBase(roomID: roomid)
+                                }
+                            })
                             self.present(vc, animated: true, completion: nil)
                         }))
-                        
                         self.present(alert, animated: true)
+                        
                     })
                 }
                 else
@@ -90,8 +130,6 @@ class RegisterViewController: UIViewController{
                 self.present(alert, animated: true)
             }
         }
-        
-        
         /*if usernameTxt.text != "" || passwordTxt.text != "" || cfmPasswordTxt.text != ""
         {
             if passwordTxt.text == cfmPasswordTxt.text
