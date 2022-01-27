@@ -11,10 +11,11 @@ import UIKit
 
 class FirebaseDAL
 {
+    typealias CompletionHandler = (_ success:Bool) -> Void
     let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
     private let database = Database.database().reference()
     
-    func loadFromFireBase(roomID : String)-> () {
+    func loadFromFireBase(roomID : String, completionHandler: @escaping CompletionHandler) {
         database.child("Rooms").child(roomID).observeSingleEvent(of: .value, with: {snapshot in
             let roomData = snapshot.value as? [String:Any]
             var testuser:Room
@@ -27,39 +28,54 @@ class FirebaseDAL
             // print("Room Description : \(rdesc!)")
             let ownerID = roomData!["OwnerID"]
             // print("Owner : \(ownerID!)")
+            let roomCode = roomData!["RoomCode"]
             
             
             
             
             let locationList = roomData!["LocationList"] as? NSArray
             var tempLocationsList:[Location] = []
-            for x in locationList!
+            if locationList == nil
             {
-                let location = x as? [String:Any]
                 
-                let lname = location!["Name"]
-                //print("Name of location : \(lname!)")
-                let ldesc = location!["Description"]
-                //print("Description of location : \(ldesc!)")
-                let lat = location!["Latitude"]
-                //print("Latitude : \(lat!)")
-                let long = location!["Longitude"]
-                //print("Longitude : \(long!)")
-                let commentList = location!["CommentList"] as? NSArray
-                
-                
-                var tempCommentList:[Comment] = []
-                //var count = 1
-                for y in commentList!
+            }
+            else
+            {
+                for x in locationList!
                 {
-                    let commentData = y as? [String:Any]
-                    let comment = commentData!["Comment"]
-                    let commentUsername = commentData!["Username"]
-                    tempCommentList.append(Comment(username: String(describing:commentUsername!), comment: String(describing:    comment!)))
+                    let location = x as? [String:Any]
+                    
+                    let lname = location!["Name"]
+                    //print("Name of location : \(lname!)")
+                    let ldesc = location!["Description"]
+                    //print("Description of location : \(ldesc!)")
+                    let lat = location!["Latitude"]
+                    //print("Latitude : \(lat!)")
+                    let long = location!["Longitude"]
+                    //print("Longitude : \(long!)")
+                    let commentList = location!["CommentList"] as? NSArray
+                    
+                    
+                    var tempCommentList:[Comment] = []
+                    //var count = 1
+                    if commentList == nil
+                    {
+                        
+                    }
+                    else
+                    {
+                        for y in commentList!
+                        {
+                            let commentData = y as? [String:Any]
+                            let comment = commentData!["Comment"]
+                            let commentUsername = commentData!["Username"]
+                            tempCommentList.append(Comment(username: String(describing:commentUsername!), comment: String(describing:    comment!)))
+                        }
+                        
+                        tempLocationsList.append(Location(name: String(describing: lname!), description: String(describing: ldesc!), latitiude: String(describing: lat!), longitude: String(describing: long!), commentList: tempCommentList))
+                    }
+                    
                 }
-                
-                tempLocationsList.append(Location(name: String(describing: lname!), description: String(describing: ldesc!), latitiude: String(describing: lat!), longitude: String(describing: long!), commentList: tempCommentList))
-                
             }
             let memberList = roomData!["Members"] as? NSArray
             var mcount = 1
@@ -69,9 +85,10 @@ class FirebaseDAL
                 tempMemberList.append(String(describing: member))
                 mcount += 1
             }
-            testuser = Room(name: String(describing: rname!), description: String(describing: rdesc!), ownerID: String(describing: ownerID!), locationList: tempLocationsList, memberList: tempMemberList)
+            testuser = Room(name: String(describing: rname!), description: String(describing: rdesc!), ownerID: String(describing: ownerID!), roomCode: String(describing: roomCode!), locationList: tempLocationsList, memberList: tempMemberList)
             self.appDelegate.roomList.append(testuser)
             
+            completionHandler(true)
         })
     }
     
