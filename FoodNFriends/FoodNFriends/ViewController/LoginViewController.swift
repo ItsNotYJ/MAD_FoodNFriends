@@ -98,8 +98,8 @@ class LoginViewController: UIViewController {
                     }
                 })
                 
-                let storyboard = UIStoryboard(name: "Content", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "Content") as UIViewController
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "Loading") as UIViewController
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
                 
