@@ -59,4 +59,22 @@ class RoomTableViewController : UITableViewController {
         }
     
     
+    @IBAction func addBtn(_ sender: Any) {
+        let alert = UIAlertController(title: "Create or Join a room", message: "", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Create  ", style: .default, handler: {(action:UIAlertAction) in
+            let storyboard = UIStoryboard(name: "Content", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "createRoom") as UIViewController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Join  ", style: .default, handler: {(action:UIAlertAction) in
+            let storyboard = UIStoryboard(name: "Content", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "joinRoom") as UIViewController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
 }
