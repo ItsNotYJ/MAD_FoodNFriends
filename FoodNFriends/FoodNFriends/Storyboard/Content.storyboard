@@ -367,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypn-sU-1hz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7752.1739130434789" y="60.9375"/>
+            <point key="canvasLocation" x="6652" y="61"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="AKl-2V-PdW">
@@ -563,6 +563,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="3qH-am-8Q9"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y7c-g6-kFm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -616,7 +617,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QwJ-Cv-bc6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6842.0289855072469" y="60.9375"/>
+            <point key="canvasLocation" x="5742" y="61"/>
         </scene>
     </scenes>
     <resources>

@@ -33,6 +33,7 @@
 		A92B4DE6279086F70006C303 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92B4DE5279086F70006C303 /* Content.storyboard */; };
 		A9632116279874D500140EF0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9632115279874D500140EF0 /* SettingsViewController.swift */; };
 		A963211A2799AE8B00140EF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96321192799AE8B00140EF0 /* GoogleService-Info.plist */; };
+		A97E21C527A2BAB100E0AAF5 /* ForgetPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		A92B4DE5279086F70006C303 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 		A9632115279874D500140EF0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A96321192799AE8B00140EF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPWViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				0EB8F147279EC6C50094906F /* LocationDetailViewController.swift */,
 				0EB8F149279ECC010094906F /* RoomDetailViewController.swift */,
 				0EB8F14B27A292EB0094906F /* LoadingPageViewController.swift */,
+				A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				A92B4DE32790868D0006C303 /* RegisterViewController.swift in Sources */,
 				0EB8F1362799CF720094906F /* Comment.swift in Sources */,
 				0EB8F1382799CF870094906F /* Location.swift in Sources */,
+				A97E21C527A2BAB100E0AAF5 /* ForgetPWViewController.swift in Sources */,
 				1987C6AE2790643100C72807 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
