@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import Firebase
+import AVFAudio
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var hawkerCentreIndex: Int?
     
     var roomList:[Room] = []
-    var locationList:[Location] = []
+    
+    
+    var room:Room?
+    var location:Location?
+    
     
     
     static var emailRef = ""
