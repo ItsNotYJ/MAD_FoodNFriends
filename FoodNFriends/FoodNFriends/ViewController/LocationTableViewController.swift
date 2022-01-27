@@ -15,14 +15,14 @@ class LocationTableViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationList = appDelegate.locationList
+        locationList = appDelegate.room!.LocationList
         
-        print(locationList[0].Name)
+        
         self.tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        locationList = appDelegate.locationList
+        locationList = appDelegate.room!.LocationList
         self.tableView.reloadData()
     }
     
@@ -45,12 +45,8 @@ class LocationTableViewController : UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "") as?  UITableViewController {
-            let location = locationList[indexPath.row]
-            
-            
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        appDelegate.location = locationList[indexPath.row]
+        
     }
     
 }
