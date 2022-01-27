@@ -46,7 +46,13 @@ class LocationTableViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         appDelegate.location = locationList[indexPath.row]
+        let storyboard = UIStoryboard(name: "Content", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LocationView") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        
         
     }
+    
     
 }
