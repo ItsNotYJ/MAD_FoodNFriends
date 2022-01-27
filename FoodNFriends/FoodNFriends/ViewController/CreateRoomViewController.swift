@@ -94,7 +94,7 @@ class CreateRoomViewController: UIViewController {
                 //add roomcode to existingrooms
                 databaseRef.child("ExistingRooms").child("Code").setValue(existingroomData)
                 
-                var testuser = Room(name: roomname, description: desc, ownerID: emailnewer, roomCode: roomcode,locationList: [], memberList: [emailnewer])
+                let testuser = Room(name: roomname, description: desc, ownerID: emailnewer, roomCode: roomcode,locationList: [], memberList: [emailnewer])
                 self.appDelegate.roomList.append(testuser)
                 self.dismiss(animated: true, completion: nil)
             }

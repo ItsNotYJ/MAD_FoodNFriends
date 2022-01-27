@@ -105,7 +105,15 @@ class RegisterViewController: UIViewController{
                                 for roomid in roomIDList
                                 {
                                     
-                                    self.fireBase.loadFromFireBase(roomID: roomid)
+                                    self.fireBase.loadFromFireBase(roomID: roomid,completionHandler: { (success) -> Void in
+                                        if success {
+                                            print("yey")
+                                        }
+                                        else
+                                        {
+                                            print("lmao")
+                                        }
+                                    })
                                 }
                             })
                             self.present(vc, animated: true, completion: nil)

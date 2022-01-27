@@ -30,7 +30,6 @@ class LoginViewController: UIViewController {
         let databaseRef = Database.database().reference()
         databaseRef.child("Rooms").child("room1").child("Members").setValue(test)
         */
-        
         passwordTxt.isSecureTextEntry = true
     }
     
@@ -93,8 +92,15 @@ class LoginViewController: UIViewController {
                     
                     for roomid in roomIDList
                     {
-                        
-                        self.fireBase.loadFromFireBase(roomID: roomid)
+                        self.fireBase.loadFromFireBase(roomID: roomid,completionHandler: { (success) -> Void in
+                            if success {
+                                
+                            }
+                            else
+                            {
+                                print("error")
+                            }
+                        })
                     }
                 })
                 
