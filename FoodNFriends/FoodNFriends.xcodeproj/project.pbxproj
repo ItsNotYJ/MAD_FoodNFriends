@@ -12,10 +12,10 @@
 		0EB8F13A2799CF9A0094906F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F1392799CF990094906F /* Room.swift */; };
 		0EB8F13C2799CFC00094906F /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F13B2799CFBF0094906F /* RoomTableViewController.swift */; };
 		0EB8F13E2799CFDF0094906F /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F13D2799CFDF0094906F /* LocationTableViewController.swift */; };
-		0EB8F1402799D2600094906F /* RoomContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8F13F2799D2600094906F /* RoomContent.storyboard */; };
 		0EB8F146279EAABB0094906F /* FirebaseDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F145279EAABB0094906F /* FirebaseDAL.swift */; };
 		0EB8F148279EC6C50094906F /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F147279EC6C50094906F /* LocationDetailViewController.swift */; };
 		0EB8F14A279ECC010094906F /* RoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F149279ECC010094906F /* RoomDetailViewController.swift */; };
+		0EB8F14C27A292EB0094906F /* LoadingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F14B27A292EB0094906F /* LoadingPageViewController.swift */; };
 		1987C6AC2790643100C72807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6AB2790643100C72807 /* AppDelegate.swift */; };
 		1987C6AE2790643100C72807 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6AD2790643100C72807 /* SceneDelegate.swift */; };
 		1987C6B02790643100C72807 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1987C6AF2790643100C72807 /* LoginViewController.swift */; };
@@ -41,10 +41,10 @@
 		0EB8F1392799CF990094906F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		0EB8F13B2799CFBF0094906F /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
 		0EB8F13D2799CFDF0094906F /* LocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
-		0EB8F13F2799D2600094906F /* RoomContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoomContent.storyboard; sourceTree = "<group>"; };
 		0EB8F145279EAABB0094906F /* FirebaseDAL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDAL.swift; sourceTree = "<group>"; };
 		0EB8F147279EC6C50094906F /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		0EB8F149279ECC010094906F /* RoomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailViewController.swift; sourceTree = "<group>"; };
+		0EB8F14B27A292EB0094906F /* LoadingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPageViewController.swift; sourceTree = "<group>"; };
 		1987C6A82790643100C72807 /* FoodNFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1987C6AB2790643100C72807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1987C6AD2790643100C72807 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +131,7 @@
 				0EB8F13D2799CFDF0094906F /* LocationTableViewController.swift */,
 				0EB8F147279EC6C50094906F /* LocationDetailViewController.swift */,
 				0EB8F149279ECC010094906F /* RoomDetailViewController.swift */,
+				0EB8F14B27A292EB0094906F /* LoadingPageViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -151,7 +152,6 @@
 			children = (
 				A92B4DE02790851A0006C303 /* Main.storyboard */,
 				A92B4DE5279086F70006C303 /* Content.storyboard */,
-				0EB8F13F2799D2600094906F /* RoomContent.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -225,7 +225,6 @@
 				A92B4DE6279086F70006C303 /* Content.storyboard in Resources */,
 				A92B4DE12790851A0006C303 /* Main.storyboard in Resources */,
 				A963211A2799AE8B00140EF0 /* GoogleService-Info.plist in Resources */,
-				0EB8F1402799D2600094906F /* RoomContent.storyboard in Resources */,
 				1987C6BB2790643100C72807 /* LaunchScreen.storyboard in Resources */,
 				1987C6B82790643100C72807 /* Assets.xcassets in Resources */,
 			);
@@ -250,6 +249,7 @@
 				0EB8F148279EC6C50094906F /* LocationDetailViewController.swift in Sources */,
 				0EB8F13E2799CFDF0094906F /* LocationTableViewController.swift in Sources */,
 				0EB8F13C2799CFC00094906F /* RoomTableViewController.swift in Sources */,
+				0EB8F14C27A292EB0094906F /* LoadingPageViewController.swift in Sources */,
 				1987C6B62790643100C72807 /* FoodNFriends.xcdatamodeld in Sources */,
 				A92B4DE32790868D0006C303 /* RegisterViewController.swift in Sources */,
 				0EB8F1362799CF720094906F /* Comment.swift in Sources */,

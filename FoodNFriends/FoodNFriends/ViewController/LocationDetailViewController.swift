@@ -29,5 +29,8 @@ class LocationDetailViewController : UIViewController {
     @IBOutlet weak var latTxt: UILabel!
     @IBOutlet weak var longTxt: UILabel!
     
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
