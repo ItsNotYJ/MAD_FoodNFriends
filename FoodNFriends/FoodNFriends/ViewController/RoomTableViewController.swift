@@ -49,7 +49,7 @@ class RoomTableViewController : UITableViewController {
         vc.modalPresentationStyle = .fullScreen
         
         let room = roomList[indexPath.row]
-        appDelegate.locationList = room.LocationList
+        appDelegate.room = room
         
         self.present(vc, animated: true, completion: nil)
 
