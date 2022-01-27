@@ -44,14 +44,12 @@ class RoomTableViewController : UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "RoomContent", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "RoomContentView") as UIViewController
-        vc.modalPresentationStyle = .fullScreen
+        
         
         let room = roomList[indexPath.row]
         appDelegate.room = room
         
-        self.present(vc, animated: true, completion: nil)
+       
 
             
             
