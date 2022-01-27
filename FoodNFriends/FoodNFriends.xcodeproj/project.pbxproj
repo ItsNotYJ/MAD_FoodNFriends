@@ -34,6 +34,8 @@
 		A9632116279874D500140EF0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9632115279874D500140EF0 /* SettingsViewController.swift */; };
 		A963211A2799AE8B00140EF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96321192799AE8B00140EF0 /* GoogleService-Info.plist */; };
 		A97E21C527A2BAB100E0AAF5 /* ForgetPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */; };
+		A97E21C727A2C93A00E0AAF5 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E21C627A2C93A00E0AAF5 /* CreateRoomViewController.swift */; };
+		A97E21C927A2C94700E0AAF5 /* JoinRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E21C827A2C94700E0AAF5 /* JoinRoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		A9632115279874D500140EF0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A96321192799AE8B00140EF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPWViewController.swift; sourceTree = "<group>"; };
+		A97E21C627A2C93A00E0AAF5 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
+		A97E21C827A2C94700E0AAF5 /* JoinRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 				0EB8F149279ECC010094906F /* RoomDetailViewController.swift */,
 				0EB8F14B27A292EB0094906F /* LoadingPageViewController.swift */,
 				A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */,
+				A97E21C627A2C93A00E0AAF5 /* CreateRoomViewController.swift */,
+				A97E21C827A2C94700E0AAF5 /* JoinRoomViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -257,12 +263,14 @@
 				0EB8F13A2799CF9A0094906F /* Room.swift in Sources */,
 				19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */,
 				0EB8F146279EAABB0094906F /* FirebaseDAL.swift in Sources */,
+				A97E21C727A2C93A00E0AAF5 /* CreateRoomViewController.swift in Sources */,
 				0EB8F148279EC6C50094906F /* LocationDetailViewController.swift in Sources */,
 				0EB8F13E2799CFDF0094906F /* LocationTableViewController.swift in Sources */,
 				0EB8F13C2799CFC00094906F /* RoomTableViewController.swift in Sources */,
 				0EB8F14C27A292EB0094906F /* LoadingPageViewController.swift in Sources */,
 				1987C6B62790643100C72807 /* FoodNFriends.xcdatamodeld in Sources */,
 				A92B4DE32790868D0006C303 /* RegisterViewController.swift in Sources */,
+				A97E21C927A2C94700E0AAF5 /* JoinRoomViewController.swift in Sources */,
 				0EB8F1362799CF720094906F /* Comment.swift in Sources */,
 				0EB8F1382799CF870094906F /* Location.swift in Sources */,
 				A97E21C527A2BAB100E0AAF5 /* ForgetPWViewController.swift in Sources */,
