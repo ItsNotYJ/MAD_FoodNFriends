@@ -34,39 +34,62 @@ class OverlayView: UIViewController {
     }
     
     @IBAction func addBtn(_ sender: Any) {
-        let desc = descriptionTxt.text!
+        let alert = UIAlertController(title: "Enter location description", message: "", preferredStyle: .alert)
         
-        let newLocation = Location(name: name, description: desc, latitiude: lat, longitude: long, commentList: [])
+        // Set textfield to the alert view for user input
+        alert.addTextField()
         
-        var totalArray:[[String:Any]] = []
-        for loc in locationList
-        {
-            let array = ["Name" : loc.Name, "Description" : loc.Description, "Latitude" : loc.Latitiude, "Longitude" : loc.Longitude, "CommentList" : loc.CommentList] as [String : Any]
+        // Retrieve textfield input
+        let subAction = UIAlertAction(title: "Submit", style: .default) { [unowned alert] _ in
             
-            totalArray.append(array)
+            let description = alert.textFields![0]
+            
+            if description.text == "" {
+                let validationAlert = UIAlertController(title: "Please enter a proper description", message: "", preferredStyle: .alert)
+                validationAlert.addAction(UIAlertAction(title: "Exit", style: .cancel))
+                
+                self.present(validationAlert, animated: true)
+            } else {
+                // TODO: Save the description.text to firebase description attribute
+                
+                let newLocation = Location(name: self.name, description: description.text!, latitiude: self.lat, longitude: self.long, commentList: [])
+                
+                var totalArray:[[String:Any]] = []
+                for loc in self.locationList
+                {
+                    let array = ["Name" : loc.Name, "Description" : loc.Description, "Latitude" : loc.Latitiude, "Longitude" : loc.Longitude, "CommentList" : loc.CommentList] as [String : Any]
+                    
+                    totalArray.append(array)
+                }
+                
+                let newData = ["Name" : newLocation.Name, "Description" : newLocation.Description, "Latitude" : newLocation.Latitiude, "Longitude" : newLocation.Longitude, "CommentList" : []] as [String : Any]
+                
+                totalArray.append(newData)
+                
+                
+                self.appDelegate.room?.LocationList.append(newLocation)
+                
+                self.locationList.append(newLocation)
+                
+                self.database.child("Rooms").child(self.appDelegate.room!.RoomCode).child("LocationList").setValue(totalArray)
+                
+                let alert = UIAlertController(title: "Success", message: "Location has been added!", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Close", style: .default, handler: {_ in
+                    self.dismiss(animated: true)
+                }))
+                self.present(alert, animated: true)
+                
+                
+            }
         }
         
-        let newData = ["Name" : newLocation.Name, "Description" : newLocation.Description, "Latitude" : newLocation.Latitiude, "Longitude" : newLocation.Longitude, "CommentList" : []] as [String : Any]
+        alert.addAction(subAction)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
-        totalArray.append(newData)
-        
-        
-        appDelegate.room?.LocationList.append(newLocation)
-        
-        locationList.append(newLocation)
-        
-        database.child("Rooms").child(appDelegate.room!.RoomCode).child("LocationList").setValue(totalArray)
-        
-        let alert = UIAlertController(title: "Success", message: "Location has been added!", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: {_ in
-            self.dismiss(animated: true)
-        }))
-        self.present(alert, animated: true)
-    }
+        present(alert, animated: true)    }
 
     
-    @IBOutlet weak var descriptionTxt: UITextField!
     @IBOutlet weak var adressTxt: UILabel!
     
     
