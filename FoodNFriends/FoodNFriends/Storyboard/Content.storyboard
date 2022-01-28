@@ -456,6 +456,38 @@
                                     <action selector="logoutBtn:" destination="vjW-hK-7Px" eventType="touchUpInside" id="EdU-tM-uf4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxA-PM-Zs3">
+                                <rect key="frame" x="15" y="198" width="98" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="4Sq-4k-Tur">
+                                <rect key="frame" x="118" y="198" width="256" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gH-wY-iyw">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="32"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Select Here">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="popupPicker:" destination="vjW-hK-7Px" eventType="touchUpInside" id="DYX-Iv-jY5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ui8-UH-h3w">
+                                        <rect key="frame" x="180" y="0.0" width="76" height="32"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="chevron.down" catalog="system" symbolScale="large"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="popupPicker:" destination="vjW-hK-7Px" eventType="touchUpInside" id="0uT-JU-R0Z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Id-hY-3AH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -463,9 +495,18 @@
                             <constraint firstItem="9Id-hY-3AH" firstAttribute="trailing" secondItem="qwC-F8-wKO" secondAttribute="trailing" constant="50" id="4cG-P8-WLO"/>
                             <constraint firstItem="9Id-hY-3AH" firstAttribute="bottom" secondItem="qwC-F8-wKO" secondAttribute="bottom" constant="50" id="50Y-Kb-cdO"/>
                             <constraint firstItem="qwC-F8-wKO" firstAttribute="leading" secondItem="9Id-hY-3AH" secondAttribute="leading" constant="50" id="9jT-nm-olH"/>
+                            <constraint firstItem="OxA-PM-Zs3" firstAttribute="leading" secondItem="9Id-hY-3AH" secondAttribute="leading" constant="15" id="Dfi-jk-Ic8"/>
+                            <constraint firstItem="OxA-PM-Zs3" firstAttribute="top" secondItem="9Id-hY-3AH" secondAttribute="top" constant="110" id="Hbp-ca-MXf"/>
+                            <constraint firstItem="4Sq-4k-Tur" firstAttribute="bottom" secondItem="OxA-PM-Zs3" secondAttribute="bottom" id="Iyw-sC-RCy"/>
+                            <constraint firstItem="9Id-hY-3AH" firstAttribute="trailing" secondItem="4Sq-4k-Tur" secondAttribute="trailing" constant="40" id="Lef-vD-U4s"/>
+                            <constraint firstItem="4Sq-4k-Tur" firstAttribute="leading" secondItem="OxA-PM-Zs3" secondAttribute="trailing" constant="5" id="XI4-Uv-Qty"/>
+                            <constraint firstItem="4Sq-4k-Tur" firstAttribute="top" secondItem="OxA-PM-Zs3" secondAttribute="top" id="sCx-nu-lqz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RBh-tJ-9aO"/>
+                    <connections>
+                        <outlet property="pickerViewBtn" destination="4gH-wY-iyw" id="jTR-SB-mOZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIE-Im-wV5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -761,6 +802,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="location.north" catalog="system" width="108" height="128"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
         <namedColor name="AccentColor">
@@ -774,6 +816,9 @@
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
