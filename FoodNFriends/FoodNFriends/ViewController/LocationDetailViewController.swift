@@ -15,6 +15,9 @@ class LocationDetailViewController : UIViewController {
     @IBOutlet weak var locationAddr: UILabel!
     @IBOutlet weak var locationMapView: GMSMapView!
 
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var location:Location?
     
