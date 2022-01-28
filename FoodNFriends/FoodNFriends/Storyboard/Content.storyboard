@@ -66,7 +66,7 @@
         <!--Hawker Centre View Controller-->
         <scene sceneID="VZX-S4-hlB">
             <objects>
-                <viewController id="S1J-1Y-7Zx" customClass="HawkerCentreViewController" customModule="FoodNFriends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="S1J-1Y-7Zx" customClass="HawkerCentreViewController" customModule="FoodNFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ukp-dA-ep4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -327,23 +327,23 @@
         <!--Location Detail View Controller-->
         <scene sceneID="7iU-fO-RKh">
             <objects>
-                <viewController id="yyo-fO-nN1" customClass="LocationDetailViewController" customModule="FoodNFriends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="yyo-fO-nN1" customClass="LocationDetailViewController" customModule="FoodNFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yxA-aa-Kcg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-wP-M3m" customClass="GMSMapView">
-                                <rect key="frame" x="15" y="108" width="384" height="452"/>
+                                <rect key="frame" x="15" y="108" width="384" height="501"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MK5-H2-FeB">
-                                <rect key="frame" x="15" y="580" width="384" height="30"/>
+                                <rect key="frame" x="15" y="629" width="384" height="30"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLv-Iu-BEL">
-                                <rect key="frame" x="120" y="692" width="174" height="31"/>
+                                <rect key="frame" x="120" y="741" width="174" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Get directions"/>
                                 <connections>
@@ -351,13 +351,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbL-z5-BeO">
-                                <rect key="frame" x="15" y="640" width="78" height="22"/>
+                                <rect key="frame" x="15" y="689" width="78" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGj-LB-RZm">
-                                <rect key="frame" x="100" y="642" width="299" height="19.5"/>
+                                <rect key="frame" x="100" y="691" width="299" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -394,17 +394,42 @@
             </objects>
             <point key="canvasLocation" x="5548" y="61"/>
         </scene>
-        <!--View Controller-->
+        <!--Direction View Controller-->
         <scene sceneID="5z8-Jh-53G">
             <objects>
-                <viewController id="6cP-O4-ms7" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="6cP-O4-ms7" customClass="DirectionViewController" customModule="FoodNFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4S-i7-e4H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8G-DZ-sFI" customClass="GMSMapView">
+                                <rect key="frame" x="15" y="103" width="384" height="624"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn4-yv-dEV">
+                                <rect key="frame" x="15" y="742" width="384" height="30"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JRE-WX-87R"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JRE-WX-87R" firstAttribute="trailing" secondItem="l8G-DZ-sFI" secondAttribute="trailing" constant="15" id="HS3-4g-hsy"/>
+                            <constraint firstItem="JRE-WX-87R" firstAttribute="bottom" secondItem="Gn4-yv-dEV" secondAttribute="bottom" constant="90" id="N8G-wY-ebF"/>
+                            <constraint firstItem="l8G-DZ-sFI" firstAttribute="leading" secondItem="JRE-WX-87R" secondAttribute="leading" constant="15" id="NVM-kv-uVK"/>
+                            <constraint firstItem="l8G-DZ-sFI" firstAttribute="top" secondItem="JRE-WX-87R" secondAttribute="top" constant="15" id="Yjl-cl-L2R"/>
+                            <constraint firstItem="Gn4-yv-dEV" firstAttribute="leading" secondItem="JRE-WX-87R" secondAttribute="leading" constant="15" id="Ypd-ra-v0v"/>
+                            <constraint firstItem="JRE-WX-87R" firstAttribute="trailing" secondItem="Gn4-yv-dEV" secondAttribute="trailing" constant="15" id="ukz-GP-au4"/>
+                            <constraint firstItem="Gn4-yv-dEV" firstAttribute="top" secondItem="l8G-DZ-sFI" secondAttribute="bottom" constant="15" id="zPG-co-Kcv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Swg-fN-3Ac"/>
+                    <connections>
+                        <outlet property="destinationName" destination="Gn4-yv-dEV" id="l6z-CT-yAy"/>
+                        <outlet property="directionMapView" destination="l8G-DZ-sFI" id="2E2-oL-NmQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHu-Sf-fDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
