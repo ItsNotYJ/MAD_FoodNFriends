@@ -10,6 +10,7 @@ import CoreData
 import Firebase
 import AVFAudio
 import GoogleMaps
+import GooglePlaces
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Load API key into Google Map Services (GMS)
         GMSServices.provideAPIKey("AIzaSyDAjkUdoWk_ByT4n0TnnOxAL2nf97iRQQY")
+        GMSPlacesClient.provideAPIKey("AIzaSyDAjkUdoWk_ByT4n0TnnOxAL2nf97iRQQY")
         
         return true
     }
