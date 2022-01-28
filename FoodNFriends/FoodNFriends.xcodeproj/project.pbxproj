@@ -27,6 +27,7 @@
 		1987C6BB2790643100C72807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1987C6B92790643100C72807 /* LaunchScreen.storyboard */; };
 		19910A7D279863CC006BFB61 /* HawkerCentreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */; };
 		19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19910A7E279863F8006BFB61 /* HawkerCentre.swift */; };
+		1993277227A3ACC100222637 /* DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1993277127A3ACC100222637 /* DirectionViewController.swift */; };
 		1997DC3827999EAE00565A2B /* HawkerCentreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */; };
 		199CBEEA27A3A2AB009D7A2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 199CBEE927A3A2AB009D7A2A /* GoogleService-Info.plist */; };
 		199CBEEC27A3A31B009D7A2A /* LoginSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CBEEB27A3A31B009D7A2A /* LoginSave.swift */; };
@@ -61,6 +62,7 @@
 		1987C6BC2790643100C72807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentreTableViewController.swift; sourceTree = "<group>"; };
 		19910A7E279863F8006BFB61 /* HawkerCentre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentre.swift; sourceTree = "<group>"; };
+		1993277127A3ACC100222637 /* DirectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewController.swift; sourceTree = "<group>"; };
 		1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentreViewController.swift; sourceTree = "<group>"; };
 		199CBEE927A3A2AB009D7A2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		199CBEEB27A3A31B009D7A2A /* LoginSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSave.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */,
 				A97E21C627A2C93A00E0AAF5 /* CreateRoomViewController.swift */,
 				A97E21C827A2C94700E0AAF5 /* JoinRoomViewController.swift */,
+				1993277127A3ACC100222637 /* DirectionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -200,7 +203,6 @@
 				580530E4307713D8F4B0F034 /* Pods-FoodNFriends.debug.xcconfig */,
 				96E12AE985280AD947FEA927 /* Pods-FoodNFriends.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -355,6 +357,7 @@
 				1997DC3827999EAE00565A2B /* HawkerCentreViewController.swift in Sources */,
 				0EB8F13A2799CF9A0094906F /* Room.swift in Sources */,
 				19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */,
+				1993277227A3ACC100222637 /* DirectionViewController.swift in Sources */,
 				199CBEEC27A3A31B009D7A2A /* LoginSave.swift in Sources */,
 				0EB8F146279EAABB0094906F /* FirebaseDAL.swift in Sources */,
 				A97E21C727A2C93A00E0AAF5 /* CreateRoomViewController.swift in Sources */,
@@ -514,6 +517,7 @@
 				DEVELOPMENT_TEAM = XL8H284G83;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodNFriends/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "FoodNFriends needs access to your location in order to provide map directions and access the user's location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -544,6 +548,7 @@
 				DEVELOPMENT_TEAM = XL8H284G83;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodNFriends/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "FoodNFriends needs access to your location in order to provide map directions and access the user's location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
