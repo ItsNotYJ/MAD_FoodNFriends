@@ -198,7 +198,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaO-ce-qjt">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaO-ce-qjt">
                                         <rect key="frame" x="0.0" y="140" width="256" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.78823529410000004" blue="0.078431372550000003" alpha="0.85432610539999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>

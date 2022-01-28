@@ -58,6 +58,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordTxt.isSecureTextEntry = true
     }
     
+    // UITextfield methods to close the keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        // Change the behaviour of the iOS keyboard
+        emailTxt.resignFirstResponder()
+        passwordTxt.resignFirstResponder()
+        
+        return true
+    }
     
     @IBAction func loginBtn(_ sender: Any) {
         if emailTxt.text == "" || passwordTxt.text == ""

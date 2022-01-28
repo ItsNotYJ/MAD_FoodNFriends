@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class ForgetPWViewController: UIViewController {
+class ForgetPWViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var resetPasswordBtn: UIButton!
@@ -19,10 +19,19 @@ class ForgetPWViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        emailTxt.delegate = self
+        
         // Code to design the view
         emailTxt.layer.cornerRadius = 22
         resetPasswordBtn.layer.cornerRadius = 22
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
+        // Change the behaviour of the iOS keyboard
+        emailTxt.resignFirstResponder()
+        
+        return true
     }
     
     @IBAction func sendBtn(_ sender: Any) {

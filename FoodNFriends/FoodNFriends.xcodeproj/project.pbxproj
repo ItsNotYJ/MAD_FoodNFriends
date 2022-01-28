@@ -172,6 +172,7 @@
 			children = (
 				1987C6AF2790643100C72807 /* LoginViewController.swift */,
 				A92B4DE22790868D0006C303 /* RegisterViewController.swift */,
+				A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */,
 				A9632115279874D500140EF0 /* SettingsViewController.swift */,
 				1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */,
 				19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */,
@@ -180,7 +181,6 @@
 				0EB8F147279EC6C50094906F /* LocationDetailViewController.swift */,
 				0EB8F149279ECC010094906F /* RoomDetailViewController.swift */,
 				0EB8F14B27A292EB0094906F /* LoadingPageViewController.swift */,
-				A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */,
 				A97E21C627A2C93A00E0AAF5 /* CreateRoomViewController.swift */,
 				A97E21C827A2C94700E0AAF5 /* JoinRoomViewController.swift */,
 				1993277127A3ACC100222637 /* DirectionViewController.swift */,

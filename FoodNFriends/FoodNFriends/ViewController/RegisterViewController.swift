@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class RegisterViewController: UIViewController{
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
     
@@ -35,6 +35,23 @@ class RegisterViewController: UIViewController{
         passwordTxt.layer.cornerRadius = 22
         emailTxt.layer.cornerRadius = 22
         registerBtn.layer.cornerRadius = 22
+        
+        usernameTxt.delegate = self
+        cfmPasswordTxt.delegate = self
+        passwordTxt.delegate = self
+        emailTxt.delegate = self
+    }
+    
+    // UITextfield methods to close the keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        // Change the behaviour of the iOS keyboard
+        usernameTxt.resignFirstResponder()
+        cfmPasswordTxt.resignFirstResponder()
+        passwordTxt.resignFirstResponder()
+        emailTxt.resignFirstResponder()
+        
+        return true
     }
     
     @IBAction func registerBtn(_ sender: Any) {
