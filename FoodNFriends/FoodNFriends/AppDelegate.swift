@@ -9,9 +9,12 @@ import UIKit
 import CoreData
 import Firebase
 import AVFAudio
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    // Set the map type based on user settings
+    var mapType: String = "normal"
 
     // To store one instance of the Hawker Centre List because the data is fixed and will never change
     var hawkerCentreList: [HawkerCentre] = []
@@ -19,17 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var roomList:[Room] = []
     
-    
     var room:Room?
     var location:Location?
-    
-    
     
     static var emailRef = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        // Load API key into Google Map Services (GMS)
+        GMSServices.provideAPIKey("AIzaSyDAjkUdoWk_ByT4n0TnnOxAL2nf97iRQQY")
+        
         return true
     }
 
