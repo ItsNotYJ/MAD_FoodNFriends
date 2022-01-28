@@ -15,11 +15,13 @@ class LoginViewController: UIViewController {
     
     private let database = Database.database().reference()
     
+    var loginSave: LoginSave?
+    
     let fireBase:FirebaseDAL = FirebaseDAL()
     
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
-  
+    @IBOutlet weak var rememberMe: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,20 @@ class LoginViewController: UIViewController {
         let databaseRef = Database.database().reference()
         databaseRef.child("Rooms").child("room1").child("Members").setValue(test)
         */
+        
+        if !LoginSaveController().IfLoginSaveIsEmpty() {
+            loginSave = LoginSaveController().RetrieveLoginSave()
+            
+            if loginSave!.isChecked! {
+                rememberMe.isOn = true
+                emailTxt.text = loginSave?.email
+            } else {
+                rememberMe.isOn = false
+            }
+        } else {
+            rememberMe.isOn = false
+        }
+        
         passwordTxt.isSecureTextEntry = true
     }
     
@@ -44,6 +60,14 @@ class LoginViewController: UIViewController {
         }
         else
         {
+            if LoginSaveController().IfLoginSaveIsEmpty() && rememberMe.isOn {
+                LoginSaveController().AddLoginSave(newLoginSave: LoginSave(e: emailTxt.text!, isChk: true))
+            } else if !LoginSaveController().IfLoginSaveIsEmpty() && rememberMe.isOn {
+                LoginSaveController().updateLoginSave(email: emailTxt.text!, isChked: true)
+            } else if !LoginSaveController().IfLoginSaveIsEmpty() && !rememberMe.isOn {
+                LoginSaveController().updateLoginSave(email: emailTxt.text!, isChked: false)
+            }
+            
             FirebaseAuth.Auth.auth().signIn(withEmail: emailTxt.text!, password: passwordTxt.text!, completion: { result, error in
                 
                 guard error == nil else {

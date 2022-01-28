@@ -28,11 +28,13 @@
 		19910A7D279863CC006BFB61 /* HawkerCentreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */; };
 		19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19910A7E279863F8006BFB61 /* HawkerCentre.swift */; };
 		1997DC3827999EAE00565A2B /* HawkerCentreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */; };
+		199CBEEA27A3A2AB009D7A2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 199CBEE927A3A2AB009D7A2A /* GoogleService-Info.plist */; };
+		199CBEEC27A3A31B009D7A2A /* LoginSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CBEEB27A3A31B009D7A2A /* LoginSave.swift */; };
+		199CBEF027A3A35D009D7A2A /* LoginSaveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CBEEF27A3A35D009D7A2A /* LoginSaveController.swift */; };
 		A92B4DE12790851A0006C303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92B4DE02790851A0006C303 /* Main.storyboard */; };
 		A92B4DE32790868D0006C303 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B4DE22790868D0006C303 /* RegisterViewController.swift */; };
 		A92B4DE6279086F70006C303 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92B4DE5279086F70006C303 /* Content.storyboard */; };
 		A9632116279874D500140EF0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9632115279874D500140EF0 /* SettingsViewController.swift */; };
-		A963211A2799AE8B00140EF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96321192799AE8B00140EF0 /* GoogleService-Info.plist */; };
 		A97E21C527A2BAB100E0AAF5 /* ForgetPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */; };
 		A97E21C727A2C93A00E0AAF5 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E21C627A2C93A00E0AAF5 /* CreateRoomViewController.swift */; };
 		A97E21C927A2C94700E0AAF5 /* JoinRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E21C827A2C94700E0AAF5 /* JoinRoomViewController.swift */; };
@@ -59,11 +61,13 @@
 		19910A7C279863CC006BFB61 /* HawkerCentreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentreTableViewController.swift; sourceTree = "<group>"; };
 		19910A7E279863F8006BFB61 /* HawkerCentre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentre.swift; sourceTree = "<group>"; };
 		1997DC3727999EAE00565A2B /* HawkerCentreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawkerCentreViewController.swift; sourceTree = "<group>"; };
+		199CBEE927A3A2AB009D7A2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		199CBEEB27A3A31B009D7A2A /* LoginSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSave.swift; sourceTree = "<group>"; };
+		199CBEEF27A3A35D009D7A2A /* LoginSaveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSaveController.swift; sourceTree = "<group>"; };
 		A92B4DE02790851A0006C303 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A92B4DE22790868D0006C303 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A92B4DE5279086F70006C303 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 		A9632115279874D500140EF0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		A96321192799AE8B00140EF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPWViewController.swift; sourceTree = "<group>"; };
 		A97E21C627A2C93A00E0AAF5 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		A97E21C827A2C94700E0AAF5 /* JoinRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomViewController.swift; sourceTree = "<group>"; };
@@ -118,11 +122,12 @@
 		1987C6AA2790643100C72807 /* FoodNFriends */ = {
 			isa = PBXGroup;
 			children = (
-				A96321192799AE8B00140EF0 /* GoogleService-Info.plist */,
+				199CBEE927A3A2AB009D7A2A /* GoogleService-Info.plist */,
 				A963210B27986CBC00140EF0 /* Storyboard */,
 				0EB8F144279EAAA80094906F /* DAL */,
 				A963210A27986CA900140EF0 /* Class */,
 				A963210927986C9900140EF0 /* ViewController */,
+				199CBEED27A3A344009D7A2A /* Controller */,
 				1987C6AB2790643100C72807 /* AppDelegate.swift */,
 				1987C6AD2790643100C72807 /* SceneDelegate.swift */,
 				1987C6B72790643100C72807 /* Assets.xcassets */,
@@ -131,6 +136,14 @@
 				1987C6B42790643100C72807 /* FoodNFriends.xcdatamodeld */,
 			);
 			path = FoodNFriends;
+			sourceTree = "<group>";
+		};
+		199CBEED27A3A344009D7A2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				199CBEEF27A3A35D009D7A2A /* LoginSaveController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A963210927986C9900140EF0 /* ViewController */ = {
@@ -160,6 +173,7 @@
 				0EB8F1352799CF720094906F /* Comment.swift */,
 				0EB8F1372799CF870094906F /* Location.swift */,
 				0EB8F1392799CF990094906F /* Room.swift */,
+				199CBEEB27A3A31B009D7A2A /* LoginSave.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -241,7 +255,7 @@
 			files = (
 				A92B4DE6279086F70006C303 /* Content.storyboard in Resources */,
 				A92B4DE12790851A0006C303 /* Main.storyboard in Resources */,
-				A963211A2799AE8B00140EF0 /* GoogleService-Info.plist in Resources */,
+				199CBEEA27A3A2AB009D7A2A /* GoogleService-Info.plist in Resources */,
 				1987C6BB2790643100C72807 /* LaunchScreen.storyboard in Resources */,
 				1987C6B82790643100C72807 /* Assets.xcassets in Resources */,
 			);
@@ -262,10 +276,12 @@
 				1997DC3827999EAE00565A2B /* HawkerCentreViewController.swift in Sources */,
 				0EB8F13A2799CF9A0094906F /* Room.swift in Sources */,
 				19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */,
+				199CBEEC27A3A31B009D7A2A /* LoginSave.swift in Sources */,
 				0EB8F146279EAABB0094906F /* FirebaseDAL.swift in Sources */,
 				A97E21C727A2C93A00E0AAF5 /* CreateRoomViewController.swift in Sources */,
 				0EB8F148279EC6C50094906F /* LocationDetailViewController.swift in Sources */,
 				0EB8F13E2799CFDF0094906F /* LocationTableViewController.swift in Sources */,
+				199CBEF027A3A35D009D7A2A /* LoginSaveController.swift in Sources */,
 				0EB8F13C2799CFC00094906F /* RoomTableViewController.swift in Sources */,
 				0EB8F14C27A292EB0094906F /* LoadingPageViewController.swift in Sources */,
 				1987C6B62790643100C72807 /* FoodNFriends.xcdatamodeld in Sources */,
