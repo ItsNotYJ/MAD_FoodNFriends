@@ -25,9 +25,9 @@ class PresentationController: UIPresentationController {
   }
   
   override var frameOfPresentedViewInContainerView: CGRect {
-      CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height * 0.7),
-             size: CGSize(width: self.containerView!.frame.width, height: self.containerView!.frame.height *
-              0.6))
+      CGRect(origin: CGPoint(x: 20, y: self.containerView!.frame.height * 0.7),
+             size: CGSize(width: self.containerView!.frame.width - 40, height: self.containerView!.frame.height *
+                          0.23))
   }
 
   override func presentationTransitionWillBegin() {
@@ -48,7 +48,7 @@ class PresentationController: UIPresentationController {
   
   override func containerViewWillLayoutSubviews() {
       super.containerViewWillLayoutSubviews()
-    presentedView!.roundCorners([.topLeft, .topRight], radius: 22)
+      presentedView!.roundCorners([.topLeft, .topRight, .bottomLeft,. bottomRight], radius: 22)
   }
 
   override func containerViewDidLayoutSubviews() {
