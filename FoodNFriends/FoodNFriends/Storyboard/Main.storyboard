@@ -123,33 +123,13 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mgX-BL-6nn">
-                                <rect key="frame" x="100" y="729" width="214" height="24"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuW-FO-DCx">
-                                        <rect key="frame" x="0.0" y="0.0" width="155" height="24"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pyh-G4-Ryj">
-                                        <rect key="frame" x="165" y="0.0" width="51" height="24"/>
-                                        <color key="onTintColor" red="1" green="0.78823529410000004" blue="0.078431372550000003" alpha="0.85432610539999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="thumbTintColor" red="0.18039215689999999" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </switch>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.35294117650000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mgX-BL-6nn" secondAttribute="bottom" constant="60" id="1ao-c3-BDB"/>
                             <constraint firstItem="zwk-7W-wka" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="7JR-ou-6NG"/>
                             <constraint firstItem="zwk-7W-wka" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="79" id="9LI-Jd-wN4"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zwk-7W-wka" secondAttribute="trailing" constant="79" id="IUG-RE-eqV"/>
-                            <constraint firstItem="mgX-BL-6nn" firstAttribute="top" secondItem="zwk-7W-wka" secondAttribute="bottom" constant="70" id="fd1-lq-LLa"/>
-                            <constraint firstItem="mgX-BL-6nn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="vQG-eD-730"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mgX-BL-6nn" secondAttribute="trailing" constant="100" id="xLj-s5-JJE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xjc-u7-Dwq"/>
@@ -157,7 +137,6 @@
                         <outlet property="emailTxt" destination="2hr-UH-nUU" id="ptB-Lr-4WB"/>
                         <outlet property="loginBtn" destination="L4l-R1-hH5" id="JQc-Gz-3y6"/>
                         <outlet property="passwordTxt" destination="gni-il-dHf" id="wKn-G6-Jq2"/>
-                        <outlet property="rememberMe" destination="pyh-G4-Ryj" id="mS8-X6-fha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
