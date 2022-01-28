@@ -19,7 +19,6 @@ class HawkerCentreViewController: UIViewController {
     @IBOutlet weak var marketStalls: UILabel!
     @IBOutlet weak var hawkerCentreMapView: GMSMapView!
     
-    
     // Use appDelegate to retrieve the selected row indexPath and use to retrieve hawker centre list data
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
