@@ -18,17 +18,23 @@ class RegisterViewController: UIViewController{
     
     let fireBase:FirebaseDAL = FirebaseDAL()
     
-    
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var cfmPasswordTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
-    
+    @IBOutlet weak var registerBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTxt.isSecureTextEntry = true
         cfmPasswordTxt.isSecureTextEntry = true
+        
+        // Code to design the view
+        usernameTxt.layer.cornerRadius = 22
+        cfmPasswordTxt.layer.cornerRadius = 22
+        passwordTxt.layer.cornerRadius = 22
+        emailTxt.layer.cornerRadius = 22
+        registerBtn.layer.cornerRadius = 22
     }
     
     @IBAction func registerBtn(_ sender: Any) {

@@ -13,9 +13,15 @@ import FirebaseDatabase
 class ForgetPWViewController: UIViewController {
 
     @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var resetPasswordBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Code to design the view
+        emailTxt.layer.cornerRadius = 22
+        resetPasswordBtn.layer.cornerRadius = 22
         
     }
     

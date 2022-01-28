@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
     
@@ -22,10 +22,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var rememberMe: UISwitch!
+    @IBOutlet weak var loginBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Code to design the view to make it look better
+        loginBtn.layer.cornerRadius = 22
+        emailTxt.layer.cornerRadius = 22
+        passwordTxt.layer.cornerRadius = 22
+        
+        emailTxt.delegate = self
+        passwordTxt.delegate = self
         
         /*
         var test = ["user1","user2","elginloh-gmail_com","dave21sg-gmail_com"]
