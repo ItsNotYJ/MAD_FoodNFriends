@@ -17,42 +17,46 @@ class LocationTableViewController : UITableViewController {
         super.viewDidLoad()
         locationList = appDelegate.room!.LocationList
         
-        
+        // Reload Data
         self.tableView.reloadData()
     }
     
+    // Determine number of sections
     override func viewDidAppear(_ animated: Bool) {
         locationList = appDelegate.room!.LocationList
         self.tableView.reloadData()
     }
     
+    // Determine number of rows
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    // Display data into cell
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return locationList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath)
+        
+        // Retrieve location object from locationList
         let location = locationList[indexPath.row]
         
-        cell.textLabel!.text = "\(location.Name)"
-        cell.detailTextLabel!.text = "\(location.Description)"
+        // Set labels with location data
+        cell.textLabel!.text = "\(location.Description)"
+        cell.detailTextLabel!.text = "\(location.Name)"
+        
         return cell
     }
     
-    
+    // User selects location and enters the detailed view controller
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         appDelegate.location = locationList[indexPath.row]
-        let storyboard = UIStoryboard(name: "Content", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LocationView") as UIViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-        
-        
     }
     
-    
+    // Adjust the height of each cell row
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }
