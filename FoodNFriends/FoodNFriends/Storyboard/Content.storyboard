@@ -145,6 +145,9 @@
                                 <rect key="frame" x="110" y="745" width="194" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Add to locations"/>
+                                <connections>
+                                    <action selector="addLocation:" destination="S1J-1Y-7Zx" eventType="touchUpInside" id="Weg-mE-Vkg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WOa-nh-HBu"/>
