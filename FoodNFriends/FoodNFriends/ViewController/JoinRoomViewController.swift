@@ -136,6 +136,14 @@ class JoinRoomViewController: UIViewController, UITextFieldDelegate {
                                 //add roomcode to user
                                 databaseRef.child("Users").child(self.emailnewer).child("RoomList").setValue(self.roomList)
                                 
+                                for x in appDelegate.roomList
+                                {
+                                    if x.RoomCode == roomcode
+                                    {
+                                        x.MemberList.append(emailnewer)
+                                    }
+                                }
+                                
                                 self.dismiss(animated: true, completion: nil)
                                 
                             }
