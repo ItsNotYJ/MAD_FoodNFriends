@@ -71,10 +71,10 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
             case .success(let coordinate):
                 DispatchQueue.main.async {
                     self?.delegate?.didTapPlace(with: coordinate)
-                    print("inside")
+                    
                 }
                 
-                print("outside")
+                
                 
                 
                 lat = String(coordinate.latitude)
