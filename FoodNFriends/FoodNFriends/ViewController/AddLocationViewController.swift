@@ -10,18 +10,12 @@ import MapKit
 
 class AddLocationViewController: UIViewController , UISearchResultsUpdating{
     
-    
-    
-    
     let mapView = MKMapView()
     
     let searchVC = UISearchController(searchResultsController: ResultsViewController())
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         view.addSubview(mapView)
         searchVC.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Please enter a postal code or address", attributes: [NSAttributedString.Key.foregroundColor:UIColor.black])
@@ -36,7 +30,6 @@ class AddLocationViewController: UIViewController , UISearchResultsUpdating{
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         mapView.frame = view.bounds
-        
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -45,10 +38,8 @@ class AddLocationViewController: UIViewController , UISearchResultsUpdating{
         let resultsVC = searchController.searchResultsController as? ResultsViewController else
               {
                   return
-                  
               }
         resultsVC.delegate = self
-        
         
         GooglePlacesManager.shared.findPlaces(query: query){ result in
             switch result {
@@ -65,7 +56,6 @@ class AddLocationViewController: UIViewController , UISearchResultsUpdating{
     }
 }
 
-
 extension AddLocationViewController:ResultsViewControllerDelegate {
     func didTapPlace(with coordinates: CLLocationCoordinate2D) {
         
@@ -77,9 +67,6 @@ extension AddLocationViewController:ResultsViewControllerDelegate {
         let annotations = mapView.annotations
         mapView.removeAnnotations(annotations)
         
-        
-        
-        
         //Add a map pin
         
         let pin = MKPointAnnotation()
@@ -87,6 +74,4 @@ extension AddLocationViewController:ResultsViewControllerDelegate {
         mapView.addAnnotation(pin)
         mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)), animated: true)
     }
-    
-    
 }

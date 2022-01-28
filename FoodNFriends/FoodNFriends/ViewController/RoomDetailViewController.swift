@@ -16,12 +16,10 @@ class RoomDetailController : UIViewController {
     var room:Room?
     var memberList:[String] = []
     
-    
-    
     @IBOutlet weak var memberTable: UITableView!
-    
     @IBOutlet weak var nameTxt: UILabel!
     @IBOutlet weak var descTxt: UILabel!
+    @IBOutlet weak var leaveBtn: UIButton!
 
     @IBAction func leaveBtn(_ sender: Any) {
         
@@ -37,6 +35,12 @@ class RoomDetailController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Code to design UI
+        leaveBtn.layer.cornerRadius = 22
+        leaveBtn.layer.borderWidth = 1
+        leaveBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
+        
         room = appDelegate.room
         memberList = room!.MemberList
         
@@ -65,6 +69,3 @@ extension RoomDetailController:UITableViewDelegate, UITableViewDataSource {
         
     }
 }
-
-
-

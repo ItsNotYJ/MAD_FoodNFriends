@@ -10,17 +10,37 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class JoinRoomViewController: UIViewController {
+class JoinRoomViewController: UIViewController, UITextFieldDelegate {
     let fireBase:FirebaseDAL = FirebaseDAL()
     let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
     private let database = Database.database().reference()
+    
     var existingroomData:[String] = []
     var roomList:[String] = []
     var emailnewer = ""
+    
+    @IBOutlet weak var joinBtn: UIButton!
     @IBOutlet weak var rCodeTxt: UITextField!
+    @IBOutlet weak var cancelBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Code to design the UI
+        rCodeTxt.delegate = self
+        rCodeTxt.layer.cornerRadius = 22
+        rCodeTxt.layer.borderWidth = 1
+        rCodeTxt.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
+        
+        joinBtn.layer.cornerRadius = 22
+        joinBtn.layer.borderWidth = 1
+        joinBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
+        
+        cancelBtn.layer.cornerRadius = 22
+        cancelBtn.layer.borderWidth = 1
+        cancelBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
+        
         let email = AppDelegate.emailRef
         let emailnew = email.replacingOccurrences(of: "@", with: "-")
         emailnewer = emailnew.replacingOccurrences(of: ".", with: "_")
@@ -33,9 +53,7 @@ class JoinRoomViewController: UIViewController {
             }
             else
             {
-                
                 self.existingroomData = (existRoom!["Code"] as! NSArray) as! [String]
-                
             }
         })
         
@@ -52,6 +70,15 @@ class JoinRoomViewController: UIViewController {
                 
             }
         })
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        rCodeTxt.resignFirstResponder()
+        return true
+    }
+    
+    @IBAction func cancelBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func joinBtn(_ sender: Any) {

@@ -10,18 +10,50 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class CreateRoomViewController: UIViewController {
+class CreateRoomViewController: UIViewController, UITextFieldDelegate {
     let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
     private let database = Database.database().reference()
+    
     var roomList:[String] = []
     var existingroomData:[String] = []
     var emailnewer = ""
+    
     @IBOutlet weak var rCodeTxt: UITextField!
     @IBOutlet weak var rNametxt: UITextField!
     @IBOutlet weak var desctxt: UITextField!
+    @IBOutlet weak var createBtn: UIButton!
+    @IBOutlet weak var cancelBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Code to design the UI
+        rCodeTxt.delegate = self
+        rCodeTxt.layer.cornerRadius = 22
+        rCodeTxt.layer.borderWidth = 1
+        rCodeTxt.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
+        
+        rNametxt.delegate = self
+        rNametxt.layer.cornerRadius = 22
+        rNametxt.layer.borderWidth = 1
+        rNametxt.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
+        
+        desctxt.delegate = self
+        desctxt.layer.cornerRadius = 22
+        desctxt.layer.borderWidth = 1
+        desctxt.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
+        
+        createBtn.layer.cornerRadius = 22
+        createBtn.layer.borderWidth = 1
+        createBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
+        
+        cancelBtn.layer.cornerRadius = 22
+        cancelBtn.layer.borderWidth = 1
+        cancelBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
+        
+        self.navigationController?.navigationBar.isHidden = true
+        
         let email = AppDelegate.emailRef
         let emailnew = email.replacingOccurrences(of: "@", with: "-")
         emailnewer = emailnew.replacingOccurrences(of: ".", with: "_")
@@ -52,6 +84,18 @@ class CreateRoomViewController: UIViewController {
         
                             }
         })
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        rNametxt.resignFirstResponder()
+        rCodeTxt.resignFirstResponder()
+        desctxt.resignFirstResponder()
+        
+        return true
+    }
+    
+    @IBAction func cancelBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func createBtn(_ sender: Any) {

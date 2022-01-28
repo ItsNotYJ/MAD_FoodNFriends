@@ -18,9 +18,14 @@ class SettingsViewController : UIViewController, UIPickerViewDelegate, UIPickerV
     let scrHeight = UIScreen.main.bounds.height / 2
     var selRow = 0
     
+    @IBOutlet weak var logoutBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        logoutBtn.layer.cornerRadius = 22
+        logoutBtn.layer.borderWidth = 1
+        logoutBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
     }
     
     var mapTypes: KeyValuePairs = [

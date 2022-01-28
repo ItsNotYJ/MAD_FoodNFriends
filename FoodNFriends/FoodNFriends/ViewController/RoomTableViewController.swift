@@ -37,27 +37,23 @@ class RoomTableViewController : UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "RoomCell", for: indexPath)
         let room = roomList[indexPath.row]
+        
         cell.textLabel!.text = "\(room.Name)"
         cell.detailTextLabel!.text = "\(room.Description)"
+        
         return cell
     }
     
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
         let room = roomList[indexPath.row]
         appDelegate.room = room
         
-       
-
-            
-            
-            
-            
-     
-        }
+    }
     
+    // Adjust the height of each cell row
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     @IBAction func addBtn(_ sender: Any) {
         let alert = UIAlertController(title: "Create or Join a room", message: "", preferredStyle: .alert)

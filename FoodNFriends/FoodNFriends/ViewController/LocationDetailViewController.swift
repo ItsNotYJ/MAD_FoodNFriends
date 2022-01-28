@@ -14,7 +14,8 @@ class LocationDetailViewController : UIViewController {
     @IBOutlet weak var locationDesc: UILabel!
     @IBOutlet weak var locationAddr: UILabel!
     @IBOutlet weak var locationMapView: GMSMapView!
-
+    @IBOutlet weak var directionsBtn: UIButton!
+    
     @IBAction func backBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -23,6 +24,11 @@ class LocationDetailViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Code to design the UI
+        directionsBtn.layer.cornerRadius = 22
+        directionsBtn.layer.borderWidth = 1
+        directionsBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
         
         // Set the selected location to local scope location variable
         location = appDelegate.location

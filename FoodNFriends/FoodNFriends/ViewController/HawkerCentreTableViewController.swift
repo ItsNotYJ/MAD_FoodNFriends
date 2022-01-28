@@ -59,6 +59,9 @@ class HawkerCentreTableViewController: UITableViewController {
             cell.detailTextLabel?.text = "Market and Hawker Centre"
         }
         
+        // Code to design the UI
+        cell.tintColor = UIColor.init(red: 223, green: 78, blue: 50, alpha: 1)
+        
         return cell
     }
     
