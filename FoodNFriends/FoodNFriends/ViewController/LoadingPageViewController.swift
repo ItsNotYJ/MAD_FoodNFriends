@@ -7,15 +7,22 @@
 
 import Foundation
 import UIKit
-
+import NVActivityIndicatorView
 
 class LoadingPageViewController: UIViewController {
- 
+    @IBOutlet weak var loadingIndicatorView: NVActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadingIndicatorView.type = .ballScaleRippleMultiple
+        loadingIndicatorView.color = .white
+        loadingIndicatorView.startAnimating()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2)
         {
+            self.loadingIndicatorView.stopAnimating()
+            
             let storyboard = UIStoryboard(name: "Content", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Content") as UIViewController
             vc.modalPresentationStyle = .fullScreen

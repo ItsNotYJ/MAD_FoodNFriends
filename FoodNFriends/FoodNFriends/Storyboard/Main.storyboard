@@ -419,21 +419,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvJ-wO-UxK">
-                                <rect key="frame" x="91" y="424" width="232" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="XrW-0W-g3S" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8lK-hj-KR3"/>
+                                    <constraint firstAttribute="height" constant="300" id="xWg-Al-ReW"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Yd-g8-RtP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.18039215689999999" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XrW-0W-g3S" firstAttribute="top" secondItem="8Yd-g8-RtP" secondAttribute="top" constant="254" id="3WO-uW-4sz"/>
+                            <constraint firstItem="8Yd-g8-RtP" firstAttribute="trailing" secondItem="XrW-0W-g3S" secondAttribute="trailing" constant="57" id="OsM-tl-ogi"/>
+                            <constraint firstItem="8Yd-g8-RtP" firstAttribute="bottom" secondItem="XrW-0W-g3S" secondAttribute="bottom" constant="264" id="Ukf-iA-iRp"/>
+                            <constraint firstItem="XrW-0W-g3S" firstAttribute="leading" secondItem="8Yd-g8-RtP" secondAttribute="leading" constant="57" id="qtf-9K-Gt6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadingIndicatorView" destination="XrW-0W-g3S" id="BZY-FB-gcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1s-LH-Ttb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2846" y="794"/>
+            <point key="canvasLocation" x="2844.9275362318845" y="793.52678571428567"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.18039215689999999" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
