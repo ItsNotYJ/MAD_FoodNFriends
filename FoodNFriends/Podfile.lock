@@ -6,12 +6,16 @@ PODS:
   - GoogleMaps/Maps (6.0.1):
     - GoogleMaps/Base
   - GooglePlaces (6.0.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - GoogleMaps (= 6.0.1)
   - GooglePlaces
+  - NVActivityIndicatorView
   - SwiftyJSON
 
 SPEC REPOS:
@@ -19,14 +23,16 @@ SPEC REPOS:
     - Alamofire
     - GoogleMaps
     - GooglePlaces
+    - NVActivityIndicatorView
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   GoogleMaps: c213fc2334b7374144cede914da779b99be0ab74
   GooglePlaces: c97d96ae68594acb64035c9ca9f26fbfc1d23af1
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 62b1f8942fa5a2d061b3846ecc7d2be507218e6f
+PODFILE CHECKSUM: 17652e5d5d8d9f5e1a81e33fbe2eb3fa2cc38493
 
 COCOAPODS: 1.11.2

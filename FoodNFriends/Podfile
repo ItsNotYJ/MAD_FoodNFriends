@@ -12,4 +12,5 @@ target 'FoodNFriends' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'GooglePlaces'
+  pod 'NVActivityIndicatorView'
 end
