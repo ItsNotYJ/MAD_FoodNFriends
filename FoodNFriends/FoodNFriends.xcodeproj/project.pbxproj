@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E739ABB27A408CD002140D5 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E739ABA27A408CD002140D5 /* GooglePlacesManager.swift */; };
+		0E739ABD27A408F8002140D5 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E739ABC27A408F8002140D5 /* AddLocationViewController.swift */; };
+		0E739ABF27A40919002140D5 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E739ABE27A40919002140D5 /* ResultsViewController.swift */; };
+		0E739AC127A40936002140D5 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E739AC027A40936002140D5 /* OverlayView.swift */; };
+		0E739AC327A4094D002140D5 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E739AC227A4094D002140D5 /* PresentationController.swift */; };
+		0E739AC527A40ACE002140D5 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E739AC427A40ACE002140D5 /* OverlayView.xib */; };
 		0EB8F1362799CF720094906F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F1352799CF720094906F /* Comment.swift */; };
 		0EB8F1382799CF870094906F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F1372799CF870094906F /* Location.swift */; };
 		0EB8F13A2799CF9A0094906F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8F1392799CF990094906F /* Room.swift */; };
@@ -43,6 +49,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E739ABA27A408CD002140D5 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
+		0E739ABC27A408F8002140D5 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		0E739ABE27A40919002140D5 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		0E739AC027A40936002140D5 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		0E739AC227A4094D002140D5 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		0E739AC427A40ACE002140D5 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		0EB8F1352799CF720094906F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		0EB8F1372799CF870094906F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		0EB8F1392799CF990094906F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
@@ -172,6 +184,11 @@
 				A97E21C627A2C93A00E0AAF5 /* CreateRoomViewController.swift */,
 				A97E21C827A2C94700E0AAF5 /* JoinRoomViewController.swift */,
 				1993277127A3ACC100222637 /* DirectionViewController.swift */,
+				0E739ABA27A408CD002140D5 /* GooglePlacesManager.swift */,
+				0E739ABC27A408F8002140D5 /* AddLocationViewController.swift */,
+				0E739ABE27A40919002140D5 /* ResultsViewController.swift */,
+				0E739AC027A40936002140D5 /* OverlayView.swift */,
+				0E739AC227A4094D002140D5 /* PresentationController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -193,6 +210,7 @@
 			children = (
 				A92B4DE02790851A0006C303 /* Main.storyboard */,
 				A92B4DE5279086F70006C303 /* Content.storyboard */,
+				0E739AC427A40ACE002140D5 /* OverlayView.xib */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -276,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A92B4DE6279086F70006C303 /* Content.storyboard in Resources */,
+				0E739AC527A40ACE002140D5 /* OverlayView.xib in Resources */,
 				A92B4DE12790851A0006C303 /* Main.storyboard in Resources */,
 				199CBEEA27A3A2AB009D7A2A /* GoogleService-Info.plist in Resources */,
 				1987C6BB2790643100C72807 /* LaunchScreen.storyboard in Resources */,
@@ -354,9 +373,11 @@
 				19910A7D279863CC006BFB61 /* HawkerCentreTableViewController.swift in Sources */,
 				A9632116279874D500140EF0 /* SettingsViewController.swift in Sources */,
 				0EB8F14A279ECC010094906F /* RoomDetailViewController.swift in Sources */,
+				0E739ABD27A408F8002140D5 /* AddLocationViewController.swift in Sources */,
 				1997DC3827999EAE00565A2B /* HawkerCentreViewController.swift in Sources */,
 				0EB8F13A2799CF9A0094906F /* Room.swift in Sources */,
 				19910A7F279863F8006BFB61 /* HawkerCentre.swift in Sources */,
+				0E739AC127A40936002140D5 /* OverlayView.swift in Sources */,
 				1993277227A3ACC100222637 /* DirectionViewController.swift in Sources */,
 				199CBEEC27A3A31B009D7A2A /* LoginSave.swift in Sources */,
 				0EB8F146279EAABB0094906F /* FirebaseDAL.swift in Sources */,
@@ -371,8 +392,11 @@
 				A97E21C927A2C94700E0AAF5 /* JoinRoomViewController.swift in Sources */,
 				0EB8F1362799CF720094906F /* Comment.swift in Sources */,
 				0EB8F1382799CF870094906F /* Location.swift in Sources */,
+				0E739ABF27A40919002140D5 /* ResultsViewController.swift in Sources */,
 				A97E21C527A2BAB100E0AAF5 /* ForgetPWViewController.swift in Sources */,
 				1987C6AE2790643100C72807 /* SceneDelegate.swift in Sources */,
+				0E739ABB27A408CD002140D5 /* GooglePlacesManager.swift in Sources */,
+				0E739AC327A4094D002140D5 /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
