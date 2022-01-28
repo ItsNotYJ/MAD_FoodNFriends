@@ -72,8 +72,9 @@ class FirebaseDAL
                             tempCommentList.append(Comment(username: String(describing:commentUsername!), comment: String(describing:    comment!)))
                         }
                         
-                        tempLocationsList.append(Location(name: String(describing: lname!), description: String(describing: ldesc!), latitiude: String(describing: lat!), longitude: String(describing: long!), commentList: tempCommentList))
+                        
                     }
+                    tempLocationsList.append(Location(name: String(describing: lname!), description: String(describing: ldesc!), latitiude: String(describing: lat!), longitude: String(describing: long!), commentList: tempCommentList))
                     
                 }
             }
