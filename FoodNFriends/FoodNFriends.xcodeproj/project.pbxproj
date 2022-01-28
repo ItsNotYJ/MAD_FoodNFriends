@@ -38,6 +38,7 @@
 		A97E21C527A2BAB100E0AAF5 /* ForgetPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */; };
 		A97E21C727A2C93A00E0AAF5 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E21C627A2C93A00E0AAF5 /* CreateRoomViewController.swift */; };
 		A97E21C927A2C94700E0AAF5 /* JoinRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E21C827A2C94700E0AAF5 /* JoinRoomViewController.swift */; };
+		EB7DBEDB20FE1A88A68CCF69 /* Pods_FoodNFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC29720BC6E0633C612D85E1 /* Pods_FoodNFriends.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		199CBEE927A3A2AB009D7A2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		199CBEEB27A3A31B009D7A2A /* LoginSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSave.swift; sourceTree = "<group>"; };
 		199CBEEF27A3A35D009D7A2A /* LoginSaveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSaveController.swift; sourceTree = "<group>"; };
+		580530E4307713D8F4B0F034 /* Pods-FoodNFriends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodNFriends.debug.xcconfig"; path = "Target Support Files/Pods-FoodNFriends/Pods-FoodNFriends.debug.xcconfig"; sourceTree = "<group>"; };
+		96E12AE985280AD947FEA927 /* Pods-FoodNFriends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodNFriends.release.xcconfig"; path = "Target Support Files/Pods-FoodNFriends/Pods-FoodNFriends.release.xcconfig"; sourceTree = "<group>"; };
 		A92B4DE02790851A0006C303 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A92B4DE22790868D0006C303 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A92B4DE5279086F70006C303 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		A97E21C427A2BAB100E0AAF5 /* ForgetPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPWViewController.swift; sourceTree = "<group>"; };
 		A97E21C627A2C93A00E0AAF5 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		A97E21C827A2C94700E0AAF5 /* JoinRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomViewController.swift; sourceTree = "<group>"; };
+		DC29720BC6E0633C612D85E1 /* Pods_FoodNFriends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodNFriends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 				0EB8F15827A2B3C20094906F /* FirebaseDatabase in Frameworks */,
 				0EB8F15627A2B3C20094906F /* FirebaseAuth in Frameworks */,
 				0EB8F15A27A2B3C20094906F /* FirebaseStorage in Frameworks */,
+				EB7DBEDB20FE1A88A68CCF69 /* Pods_FoodNFriends.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,7 @@
 		0EB8F14D27A2B2EF0094906F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC29720BC6E0633C612D85E1 /* Pods_FoodNFriends.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,6 +114,7 @@
 				1987C6AA2790643100C72807 /* FoodNFriends */,
 				1987C6A92790643100C72807 /* Products */,
 				0EB8F14D27A2B2EF0094906F /* Frameworks */,
+				C7D5DFB6BAE06B35B9B80276 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,6 +194,16 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		C7D5DFB6BAE06B35B9B80276 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				580530E4307713D8F4B0F034 /* Pods-FoodNFriends.debug.xcconfig */,
+				96E12AE985280AD947FEA927 /* Pods-FoodNFriends.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1987C6BF2790643100C72807 /* Build configuration list for PBXNativeTarget "FoodNFriends" */;
 			buildPhases = (
+				3949A37D45824D838135189C /* [CP] Check Pods Manifest.lock */,
 				1987C6A42790643100C72807 /* Sources */,
 				1987C6A52790643100C72807 /* Frameworks */,
 				1987C6A62790643100C72807 /* Resources */,
+				632A9DDAB0B6539A751B5699 /* [CP] Embed Pods Frameworks */,
+				10095823FDECF28002F1967A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +282,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10095823FDECF28002F1967A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodNFriends/Pods-FoodNFriends-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodNFriends/Pods-FoodNFriends-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodNFriends/Pods-FoodNFriends-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3949A37D45824D838135189C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodNFriends-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		632A9DDAB0B6539A751B5699 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodNFriends/Pods-FoodNFriends-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodNFriends/Pods-FoodNFriends-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodNFriends/Pods-FoodNFriends-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1987C6A42790643100C72807 /* Sources */ = {
@@ -426,6 +505,7 @@
 		};
 		1987C6C02790643100C72807 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 580530E4307713D8F4B0F034 /* Pods-FoodNFriends.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +535,7 @@
 		};
 		1987C6C12790643100C72807 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96E12AE985280AD947FEA927 /* Pods-FoodNFriends.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
