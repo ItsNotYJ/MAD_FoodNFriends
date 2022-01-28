@@ -11,5 +11,5 @@ target 'FoodNFriends' do
   pod 'GoogleMaps', '6.0.1'
   pod 'Alamofire'
   pod 'SwiftyJSON'
-pod 'GooglePlaces'
+  pod 'GooglePlaces'
 end
