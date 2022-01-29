@@ -97,6 +97,11 @@ class SettingsViewController : UIViewController, UIPickerViewDelegate, UIPickerV
             let vc = storyboard.instantiateViewController(withIdentifier: "Main") as UIViewController
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
+            
+            appDelegate.hawkerCentreList = []
+            appDelegate.roomList = []
+            AppDelegate.emailRef = ""
+            
         }
         catch {
             let alert = UIAlertController(title: "Error", message: "An error occurred", preferredStyle: .alert)
