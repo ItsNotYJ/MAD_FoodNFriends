@@ -1,7 +1,7 @@
 # FoodNFriends
 
 ## Category
-FoodNFriends
+Food & Lifestlye
 
 ## What is FoodNFriends?
 FoodNFriends allows you to keep track of locations that you and your friends love, as well as get the best route to get there with our built in directions feature!
