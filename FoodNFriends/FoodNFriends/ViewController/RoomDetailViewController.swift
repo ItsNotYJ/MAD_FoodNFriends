@@ -21,7 +21,8 @@ class RoomDetailController : UIViewController {
     @IBOutlet weak var memberTable: UITableView!
     @IBOutlet weak var nameTxt: UILabel!
     @IBOutlet weak var descTxt: UILabel!
-
+    @IBOutlet weak var roomCodeTxt: UILabel!
+    
     @IBOutlet weak var leaveBtn: UIButton!
     
     
@@ -41,6 +42,8 @@ class RoomDetailController : UIViewController {
                 let errAlert = UIAlertController(title: "Cannot leave", message: "Don't leave! You squad needs a leader!", preferredStyle: .alert)
                 errAlert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                 self.present(errAlert, animated: true)
+                
+                
             }
             else
             {
@@ -91,14 +94,18 @@ class RoomDetailController : UIViewController {
                 
                 })
                 
-                self.appDelegate.hawkerCentreList = []
-                self.appDelegate.roomList = []
-                
-                AppDelegate.emailRef = ""
+              
                 
                 let successAlert = UIAlertController(title: "Success", message: "You have left the room", preferredStyle: .alert)
                 successAlert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                self.dismiss(animated: true, completion: nil)
+                
+                
+                let storyboard = UIStoryboard(name: "Content", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "Content") 
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                
+                
                 self.present(successAlert, animated: true)
                 
                 
@@ -123,6 +130,7 @@ class RoomDetailController : UIViewController {
         
         nameTxt.text = room!.Name
         descTxt.text = room!.Description
+        roomCodeTxt.text = room!.RoomCode
         
         memberTable.delegate = self
         memberTable.dataSource = self
@@ -143,7 +151,11 @@ extension RoomDetailController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = memberTable.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath)
         
-        cell.textLabel!.text = "\(memberList[indexPath.row])"
+        let email = memberList[indexPath.row]
+        let emailnew = email.replacingOccurrences(of: "-", with: "@")
+        let emailnewer = emailnew.replacingOccurrences(of: "_", with: ".")
+        
+        cell.textLabel!.text = emailnewer
         
         return cell
         
