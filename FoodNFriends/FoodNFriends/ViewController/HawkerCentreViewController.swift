@@ -10,7 +10,6 @@ import UIKit
 import GoogleMaps
 import FirebaseDatabase
 
-//TODO: Hide the add location button if the hawker centre has already been added to the location list
 class HawkerCentreViewController: UIViewController {
     @IBOutlet weak var hawkerName: UILabel!
     @IBOutlet weak var hawkerType: UILabel!
@@ -28,6 +27,9 @@ class HawkerCentreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
         
         // Retrieve the specific hawker object from the appDelegate list
         hawkerCentre = appDelegate.hawkerCentreList[appDelegate.hawkerCentreIndex!]

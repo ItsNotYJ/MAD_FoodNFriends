@@ -52,6 +52,9 @@ class CreateRoomViewController: UIViewController, UITextFieldDelegate {
         cancelBtn.layer.borderWidth = 1
         cancelBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
         
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
+        
         self.navigationController?.navigationBar.isHidden = true
         
         let email = AppDelegate.emailRef

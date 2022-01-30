@@ -24,6 +24,9 @@ class ForgetPWViewController: UIViewController, UITextFieldDelegate {
         // Code to design the view
         emailTxt.layer.cornerRadius = 22
         resetPasswordBtn.layer.cornerRadius = 22
+        
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

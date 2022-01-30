@@ -34,6 +34,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         emailTxt.delegate = self
         passwordTxt.delegate = self
         
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
+        
         /*
         var test = ["user1","user2","elginloh-gmail_com","dave21sg-gmail_com"]
         let databaseRef = Database.database().reference()

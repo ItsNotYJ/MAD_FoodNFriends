@@ -47,6 +47,9 @@ class DirectionViewController: UIViewController, CLLocationManagerDelegate {
         location = appDelegate.location
         locationManager.delegate = self
         
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
+        
         // TODO: Need to change back to location!.Name, currently used for testing purposes
         var destination: String = location!.Description
         destination = destination.replacingOccurrences(of: " ", with: "")

@@ -17,7 +17,6 @@ class HawkerCentreTableViewController: UITableViewController {
         
         tableView.delegate = self
         
-        // TODO: Might shift this API call somewhere else to save the hawker centre list as to be more efficient coding wise
         // Only run the API code once and only when the hawker centre list is empty during the user's session
         if appDelegate.hawkerCentreList.count == 0 {
             HawkerApi().GetHawkerCentres { (hc) in
@@ -25,6 +24,9 @@ class HawkerCentreTableViewController: UITableViewController {
                 self.tableView.reloadData() // Reload data once it loads
             }
         }
+        
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
     }
     
     override func viewDidAppear(_ animated: Bool) {

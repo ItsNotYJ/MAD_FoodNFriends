@@ -592,7 +592,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbf-cH-k4U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000.0000000000001" y="786.83035714285711"/>
+            <point key="canvasLocation" x="1000" y="787"/>
         </scene>
         <!--Hawker Centre-->
         <scene sceneID="FVx-8R-faG">
@@ -1030,13 +1030,18 @@
         <scene sceneID="Wis-go-fZe">
             <objects>
                 <navigationController title="Search Location" automaticallyAdjustsScrollViewInsets="NO" id="pBl-Ko-hMQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search Location" id="nZx-aF-MB9"/>
+                    <tabBarItem key="tabBarItem" title="Search Location" id="nZx-aF-MB9">
+                        <color key="badgeColor" red="1" green="0.78823529410000004" blue="0.078431372550000003" alpha="0.85432610539999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mDA-KZ-VQb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="AG3-We-aDk">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="ZPR-01-WrB" kind="relationship" relationship="rootViewController" id="58S-1h-l8d"/>
                     </connections>

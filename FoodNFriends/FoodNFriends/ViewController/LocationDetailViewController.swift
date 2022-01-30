@@ -30,6 +30,9 @@ class LocationDetailViewController : UIViewController {
         directionsBtn.layer.borderWidth = 1
         directionsBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
         
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
+        
         // Set the selected location to local scope location variable
         location = appDelegate.location
         

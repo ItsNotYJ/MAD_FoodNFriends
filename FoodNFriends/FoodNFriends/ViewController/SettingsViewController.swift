@@ -26,6 +26,9 @@ class SettingsViewController : UIViewController, UIPickerViewDelegate, UIPickerV
         logoutBtn.layer.cornerRadius = 22
         logoutBtn.layer.borderWidth = 1
         logoutBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
+        
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
     }
     
     var mapTypes: KeyValuePairs = [

@@ -17,6 +17,9 @@ class LocationTableViewController : UITableViewController {
         super.viewDidLoad()
         locationList = appDelegate.room!.LocationList
         
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
+        
         // Reload Data
         self.tableView.reloadData()
     }

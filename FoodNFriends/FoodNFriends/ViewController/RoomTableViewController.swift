@@ -17,8 +17,13 @@ class RoomTableViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
+        
         roomList = appDelegate.roomList
         self.tableView.reloadData()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

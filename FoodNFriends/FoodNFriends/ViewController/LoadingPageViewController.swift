@@ -19,6 +19,9 @@ class LoadingPageViewController: UIViewController {
         loadingIndicatorView.color = .white
         loadingIndicatorView.startAnimating()
         
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2)
         {
             self.loadingIndicatorView.stopAnimating()

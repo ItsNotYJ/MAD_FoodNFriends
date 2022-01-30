@@ -17,6 +17,9 @@ class AddLocationViewController: UIViewController , UISearchResultsUpdating{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
+        
         view.addSubview(mapView)
         searchVC.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Please enter a postal code or address", attributes: [NSAttributedString.Key.foregroundColor:UIColor.black])
         

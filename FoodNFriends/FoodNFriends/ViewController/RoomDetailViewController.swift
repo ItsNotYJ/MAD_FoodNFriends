@@ -127,6 +127,9 @@ class RoomDetailController : UIViewController {
         memberTable.delegate = self
         memberTable.dataSource = self
         
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
+        
     }
     
     

@@ -40,6 +40,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         cfmPasswordTxt.delegate = self
         passwordTxt.delegate = self
         emailTxt.delegate = self
+        
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
     }
     
     // UITextfield methods to close the keyboard

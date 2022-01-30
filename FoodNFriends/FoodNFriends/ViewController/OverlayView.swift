@@ -25,6 +25,9 @@ class OverlayView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Always adopt a light interface style.
+        overrideUserInterfaceStyle = .dark
+        
         locationList = appDelegate.room!.LocationList
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
