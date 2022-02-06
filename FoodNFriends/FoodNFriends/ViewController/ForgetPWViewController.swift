@@ -40,14 +40,17 @@ class ForgetPWViewController: UIViewController, UITextFieldDelegate {
     @IBAction func sendBtn(_ sender: Any) {
         let auth = Auth.auth()
         
+        //firebase authentication for resetting password
         auth.sendPasswordReset(withEmail: emailTxt.text!) { (error) in
             if let error = error {
+                //unsuccessful alert unsuccessful message
                 let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
 
                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                 self.present(alert, animated: true)
                 return
             }
+            //if successful alert success message
             let alert = UIAlertController(title: "Success", message: "A password reset has been sent to your email", preferredStyle: .alert)
 
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))

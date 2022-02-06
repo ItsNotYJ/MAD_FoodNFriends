@@ -44,10 +44,12 @@ class JoinRoomViewController: UIViewController, UITextFieldDelegate {
         // Always adopt a light interface style.
         overrideUserInterfaceStyle = .dark
         
+        //converting special characters cause of restrictions
         let email = AppDelegate.emailRef
         let emailnew = email.replacingOccurrences(of: "@", with: "-")
         emailnewer = emailnew.replacingOccurrences(of: ".", with: "_")
         
+        //check if the room is existing
         self.database.child("ExistingRooms").observeSingleEvent(of: .value, with: {snapshot in
             let existRoom = snapshot.value as? [String:Any]
             
@@ -60,6 +62,7 @@ class JoinRoomViewController: UIViewController, UITextFieldDelegate {
             }
         })
         
+        //retrieve all the roomlist
         self.database.child("Users").child(emailnewer).observeSingleEvent(of: .value, with: {snapshot in
             let userData = snapshot.value as? [String:Any]
             
@@ -89,6 +92,7 @@ class JoinRoomViewController: UIViewController, UITextFieldDelegate {
         var roomexist = false
         var inroom = false
         var testList:[String] = []
+        //if field is empty
         if rCodeTxt.text! == ""
         {
             let alert = UIAlertController(title: "Error", message: "Please enter a room code", preferredStyle: .alert)
@@ -100,11 +104,13 @@ class JoinRoomViewController: UIViewController, UITextFieldDelegate {
         {
             for x in existingroomData
             {
+                //check if room code matches
                 if x == roomcode
                 {
                     roomexist = true
                     for c in self.roomList
                     {
+                        //check if user already inside the room
                         if c == roomcode
                         {
                             inroom = true
@@ -114,14 +120,13 @@ class JoinRoomViewController: UIViewController, UITextFieldDelegate {
                     
                     if inroom == false
                     {
+                        //retrieve the room
                         self.fireBase.loadFromFireBase(roomID: roomcode,completionHandler: { [self] (success) -> Void in
                             if success {
-                                print(self.appDelegate.roomList.count)
                                 for y in appDelegate.roomList
                                 {
                                     if y.RoomCode == roomcode
                                     {
-                                        print(y.MemberList)
                                         testList = y.MemberList
                                         break
                                     }

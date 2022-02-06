@@ -57,6 +57,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginBtn(_ sender: Any) {
+        //check if fields are empty
         if emailTxt.text == "" || passwordTxt.text == ""
         {
             let alert = UIAlertController(title: "Empty input", message: "Please enter all input", preferredStyle: .alert)
@@ -66,8 +67,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
+            //firebase authentication for signing in
             FirebaseAuth.Auth.auth().signIn(withEmail: emailTxt.text!, password: passwordTxt.text!, completion: { result, error in
-                
+                //if unsuccessful
                 guard error == nil else {
                     //fail to sign in
                     let alert = UIAlertController(title: "Incorrect Username/Password", message: "Please try again", preferredStyle: .alert)
@@ -77,6 +79,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     return
                 }
                 
+                //convert email @ and . to - and _ cause of the restriction when saving data
                 let email = self.emailTxt.text!
                 let emailnew = email.replacingOccurrences(of: "@", with: "-")
                 let emailnewer = emailnew.replacingOccurrences(of: ".", with: "_")
@@ -89,7 +92,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 var roomIDList:[String] = []
                 
                 
-                
+                //retrieving of users
                 self.database.child("Users").child(emailnewer).observeSingleEvent(of: .value, with: {snapshot in
                     let userData = snapshot.value as? [String:Any]
                     
