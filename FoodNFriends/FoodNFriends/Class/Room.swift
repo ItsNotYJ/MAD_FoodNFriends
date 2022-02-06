@@ -6,12 +6,17 @@
 //
 
 import Foundation
+
+//room class to store information of room and list of locations
 class Room {
     var Name:String
     var Description:String
     var OwnerID:String
     var RoomCode:String
+    
+    //list of locations
     var LocationList:[Location] = []
+    //list of memberID
     var MemberList:[String] = []
 
     init(name:String, description:String, ownerID:String, roomCode:String, locationList:[Location], memberList:[String])

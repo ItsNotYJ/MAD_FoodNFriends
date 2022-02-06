@@ -28,6 +28,7 @@ class RoomDetailController : UIViewController {
     
     @IBAction func leaveBtn(_ sender: Any) {
         
+        //alert popup
         let alert = UIAlertController(title: "Leave Room?", message: "Do you want to leave the room?", preferredStyle: .alert)
 
         
@@ -39,6 +40,7 @@ class RoomDetailController : UIViewController {
             print("yes")
             if emailnewer == self.room?.OwnerID
             {
+                //prompt message
                 let errAlert = UIAlertController(title: "Cannot leave", message: "Don't leave! You squad needs a leader!", preferredStyle: .alert)
                 errAlert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
                 self.present(errAlert, animated: true)
@@ -49,18 +51,21 @@ class RoomDetailController : UIViewController {
             {
                 
                  
-                
+                //remove current room code from roomlist
                 self.appDelegate.roomList.removeAll{room in
                     return room.RoomCode == self.appDelegate.room?.RoomCode
                 }
                 
+                //remove user emailID from room memberlist
                 self.appDelegate.room?.MemberList.removeAll{value in
                    return value == emailnewer}
                 let newMemberList:[String] = self.appDelegate.room!.MemberList
                 
                 
+                //removing user emailID from firebase database
                 self.database.child("Rooms").child(self.appDelegate.room!.RoomCode).child("Members").setValue(newMemberList)
                 
+                //remove room code from user roomlist in firebase database
                 self.database.child("Users").child(emailnewer).observeSingleEvent(of: .value, with: {snapshot in
                     let userData = snapshot.value as? [String:Any]
                     
@@ -105,6 +110,7 @@ class RoomDetailController : UIViewController {
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
                 
+                //redirect to content view
                 
                 self.present(successAlert, animated: true)
                 
@@ -125,6 +131,7 @@ class RoomDetailController : UIViewController {
         leaveBtn.layer.borderWidth = 1
         leaveBtn.layer.borderColor = .init(red: 223, green: 78, blue: 50, alpha: 1)
         
+        //retrieving room value from appdelegate
         room = appDelegate.room
         memberList = room!.MemberList
         
@@ -145,12 +152,14 @@ class RoomDetailController : UIViewController {
 
 extension RoomDetailController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        //return amount of records in memberlist
         return memberList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = memberTable.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath)
-        
+        //setting cell value to emailaddress of members
         let email = memberList[indexPath.row]
         let emailnew = email.replacingOccurrences(of: "-", with: "@")
         let emailnewer = emailnew.replacingOccurrences(of: "_", with: ".")

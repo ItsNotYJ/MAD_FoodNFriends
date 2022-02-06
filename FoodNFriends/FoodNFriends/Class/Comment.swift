@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+    //comment class to be used to store username of commenter and comment
 class Comment {
     var Username:String
     var Comment:String

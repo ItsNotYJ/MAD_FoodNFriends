@@ -14,6 +14,7 @@ class OverlayView: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let database = Database.database().reference()
     
+    //initializing locationList
     var locationList:[Location] = []
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
@@ -28,6 +29,7 @@ class OverlayView: UIViewController {
         // Always adopt a light interface style.
         overrideUserInterfaceStyle = .dark
         
+        //retrieving value of locationList from appdelegate
         locationList = appDelegate.room!.LocationList
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
@@ -37,6 +39,8 @@ class OverlayView: UIViewController {
     }
     
     @IBAction func addBtn(_ sender: Any) {
+        
+        //alert popup input for description
         let alert = UIAlertController(title: "Enter location description", message: "", preferredStyle: .alert)
         
         // Set textfield to the alert view for user input
@@ -57,25 +61,30 @@ class OverlayView: UIViewController {
                 
                 let newLocation = Location(name: self.name, description: description.text!, latitiude: self.lat, longitude: self.long, commentList: [])
                 
+                //initializint totalArray
                 var totalArray:[[String:Any]] = []
                 for loc in self.locationList
                 {
                     let array = ["Name" : loc.Name, "Description" : loc.Description, "Latitude" : loc.Latitiude, "Longitude" : loc.Longitude, "CommentList" : loc.CommentList] as [String : Any]
-                    
+                    //appending all exisitng locations to totalArray
                     totalArray.append(array)
                 }
                 
+                //initializing newData with information from selected location
                 let newData = ["Name" : newLocation.Name, "Description" : newLocation.Description, "Latitude" : newLocation.Latitiude, "Longitude" : newLocation.Longitude, "CommentList" : []] as [String : Any]
                 
+                //appending new location data to totalArray
                 totalArray.append(newData)
                 
-                
+                //appending newLocation to appDelegate
                 self.appDelegate.room?.LocationList.append(newLocation)
                 
                 self.locationList.append(newLocation)
                 
+                //updating firebase information with new and existing locations
                 self.database.child("Rooms").child(self.appDelegate.room!.RoomCode).child("LocationList").setValue(totalArray)
                 
+                //alert to prompt success message
                 let alert = UIAlertController(title: "Success", message: "Location has been added!", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: {_ in

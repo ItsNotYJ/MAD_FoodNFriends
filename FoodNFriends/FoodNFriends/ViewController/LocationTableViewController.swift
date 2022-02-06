@@ -10,11 +10,15 @@ import UIKit
 
 class LocationTableViewController : UITableViewController {
     
+    
+    //initializing locationList
     var locationList:[Location] = []
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //retrieving locationList from appDelegate
         locationList = appDelegate.room!.LocationList
         
         // Always adopt a light interface style.
@@ -26,6 +30,8 @@ class LocationTableViewController : UITableViewController {
     
     // Determine number of sections
     override func viewDidAppear(_ animated: Bool) {
+        
+        //refreshing locationList
         locationList = appDelegate.room!.LocationList
         self.tableView.reloadData()
     }
@@ -37,6 +43,8 @@ class LocationTableViewController : UITableViewController {
     
     // Display data into cell
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        //returing amount of records in locationList
         return locationList.count
     }
     

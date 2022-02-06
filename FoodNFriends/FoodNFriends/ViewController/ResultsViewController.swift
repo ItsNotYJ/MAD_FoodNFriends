@@ -17,6 +17,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     weak var delegate: ResultsViewControllerDelegate?
     private let tableView: UITableView = {
+        //setting UITableView in controller
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "AddLocationCell")
         return table
@@ -34,10 +35,13 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        
         tableView.frame = view.bounds
     }
     
     public func update(with places:[Place]) {
+        //retrieving data for table
         self.tableView.isHidden = false
         self.places = places
         tableView.reloadData()
@@ -49,6 +53,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddLocationCell", for:indexPath)
+        //setting valuye of cell to be name of place
         
         cell.textLabel?.text = places[indexPath.row].name
         return cell
@@ -65,6 +70,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let place = places[indexPath.row]
         let slideVC = OverlayView()
         
+        //retrieving coordinates of selected place
         GooglePlacesManager.shared.resolveLocation(for: place) {
             [weak self] result in
             switch result {
@@ -75,7 +81,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
                 
                 
-                
+                //retrieving latitude and longitude of placec
                 
                 lat = String(coordinate.latitude)
                 long = String(coordinate.longitude)
@@ -92,6 +98,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 print(error)
             }
             
+            //redirecting
             slideVC.modalPresentationStyle = .custom
             slideVC.transitioningDelegate = self
 

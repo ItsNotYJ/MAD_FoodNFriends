@@ -22,10 +22,11 @@ class LoadingPageViewController: UIViewController {
         // Always adopt a light interface style.
         overrideUserInterfaceStyle = .dark
         
+        //setting fixed delay to stay ono loading page
         DispatchQueue.main.asyncAfter(deadline: .now() + 2)
         {
             self.loadingIndicatorView.stopAnimating()
-            
+            //redirect to content view
             let storyboard = UIStoryboard(name: "Content", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Content") as UIViewController
             vc.modalPresentationStyle = .fullScreen

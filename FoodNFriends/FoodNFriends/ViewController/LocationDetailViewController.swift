@@ -17,6 +17,7 @@ class LocationDetailViewController : UIViewController {
     @IBOutlet weak var directionsBtn: UIButton!
     
     @IBAction func backBtn(_ sender: Any) {
+        //redirecct to previous view
         self.dismiss(animated: true, completion: nil)
     }
     let appDelegate = UIApplication.shared.delegate as! AppDelegate

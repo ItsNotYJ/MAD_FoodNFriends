@@ -9,6 +9,7 @@ import UIKit
 
 class PresentationController: UIPresentationController {
 
+    //PresentationController for overlay animations
   let blurEffectView: UIVisualEffectView!
   var tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer()
   

@@ -26,6 +26,8 @@ final class GooglePlacesManager {
         case failedToGetCoordinates
     }
     
+    
+    //function to find places based on google places autocomplete
     public func findPlaces(query: String, completion: @escaping (Result<[Place],Error>) -> Void) {
         let filter = GMSAutocompleteFilter()
         filter.type = .geocode
@@ -50,6 +52,7 @@ final class GooglePlacesManager {
         
     }
     
+    //function to return coordinates of place
     public func resolveLocation(for place: Place, completion: @escaping(Result<CLLocationCoordinate2D, Error>) -> Void)
     {
         client.fetchPlace(fromPlaceID: place.identifier, placeFields: .coordinate, sessionToken: nil)

@@ -21,6 +21,8 @@ class AddLocationViewController: UIViewController , UISearchResultsUpdating{
         overrideUserInterfaceStyle = .dark
         
         view.addSubview(mapView)
+        
+        //setting placeholder texst and color
         searchVC.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Please enter a postal code or address", attributes: [NSAttributedString.Key.foregroundColor:UIColor.black])
         
         searchVC.searchBar.backgroundColor = .systemGray5
@@ -32,6 +34,7 @@ class AddLocationViewController: UIViewController , UISearchResultsUpdating{
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        //setting size of mapView
         mapView.frame = view.bounds
     }
     
@@ -44,6 +47,7 @@ class AddLocationViewController: UIViewController , UISearchResultsUpdating{
               }
         resultsVC.delegate = self
         
+        //retrieving plaes from GooglePlacesManager
         GooglePlacesManager.shared.findPlaces(query: query){ result in
             switch result {
             case .success(let places) :
@@ -75,6 +79,7 @@ extension AddLocationViewController:ResultsViewControllerDelegate {
         let pin = MKPointAnnotation()
         pin.coordinate = coordinates
         mapView.addAnnotation(pin)
+        //setting zoom value of map
         mapView.setRegion(MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)), animated: true)
     }
 }

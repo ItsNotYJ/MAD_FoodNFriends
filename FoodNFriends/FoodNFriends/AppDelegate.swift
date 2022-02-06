@@ -21,8 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var hawkerCentreList: [HawkerCentre] = []
     var hawkerCentreIndex: Int?
     
+    //to store roomlist of logged in user
     var roomList:[Room] = []
     
+    //to store information of selected room and location
     var room:Room?
     var location:Location?
     

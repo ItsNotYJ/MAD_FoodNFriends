@@ -95,18 +95,24 @@ class SettingsViewController : UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBAction func logoutBtn(_ sender: Any) {
         do {
+            
+            //logout of account
             try FirebaseAuth.Auth.auth().signOut()
+            
+            //redirect to main storyboard
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Main") as UIViewController
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
             
+            //set appDelegate information to empty when logging out
             appDelegate.hawkerCentreList = []
             appDelegate.roomList = []
             AppDelegate.emailRef = ""
             
         }
         catch {
+            //error message
             let alert = UIAlertController(title: "Error", message: "An error occurred", preferredStyle: .alert)
 
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))

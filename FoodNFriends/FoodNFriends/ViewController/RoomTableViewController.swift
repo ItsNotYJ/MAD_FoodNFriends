@@ -12,6 +12,7 @@ import UIKit
 
 class RoomTableViewController : UITableViewController {
     
+    //initializing roomlist
     var roomList:[Room] = []
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -21,12 +22,14 @@ class RoomTableViewController : UITableViewController {
         // Always adopt a light interface style.
         overrideUserInterfaceStyle = .dark
         
+        //retrieving roomlist from appdelegate
         roomList = appDelegate.roomList
         self.tableView.reloadData()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        //refreshing table
         roomList = appDelegate.roomList
         self.tableView.reloadData()
     }
@@ -36,6 +39,8 @@ class RoomTableViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        //return amount of records in roomlist
         return roomList.count
     }
     
@@ -43,6 +48,7 @@ class RoomTableViewController : UITableViewController {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "RoomCell", for: indexPath)
         let room = roomList[indexPath.row]
         
+        //setting cell label information
         cell.textLabel!.text = "\(room.Name)"
         cell.detailTextLabel!.text = "\(room.Description)"
         
@@ -51,6 +57,8 @@ class RoomTableViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let room = roomList[indexPath.row]
+        
+        //setting selected room in appDelegate
         appDelegate.room = room
         
     }
@@ -61,14 +69,20 @@ class RoomTableViewController : UITableViewController {
     }
     
     @IBAction func addBtn(_ sender: Any) {
+        
+        //alert popup when clicking on add btn
         let alert = UIAlertController(title: "Create or Join a room", message: "", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Create  ", style: .default, handler: {(action:UIAlertAction) in
+            
+            //redirect to createRoom view
             let storyboard = UIStoryboard(name: "Content", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "createRoom") as UIViewController
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         }))
+        
+        //redirect to joinRoom view
         alert.addAction(UIAlertAction(title: "Join  ", style: .default, handler: {(action:UIAlertAction) in
             let storyboard = UIStoryboard(name: "Content", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "joinRoom") as UIViewController

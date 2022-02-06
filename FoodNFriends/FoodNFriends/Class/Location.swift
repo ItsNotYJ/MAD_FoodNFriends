@@ -6,11 +6,16 @@
 //
 
 import Foundation
+
+//location class to store information of location
+
 class Location {
     var Name:String
     var Description:String
     var Latitiude:String
     var Longitude:String
+    
+    //array of comment objects for each location
     var CommentList:[Comment] = []
 
     init(name:String, description:String, latitiude:String, longitude:String, commentList:[Comment])
