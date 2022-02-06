@@ -63,6 +63,7 @@ class HawkerCentreViewController: UIViewController {
         else {
             hawkerType.text = "Market and Hawker Centre"
         }
+        
         hawkerAddr.text = hawkerCentre!.address
         postalCode.text = "S" + String(hawkerCentre!.postalcode)
         hawkerStalls.text = String(hawkerCentre!.cookedfoodstalls)

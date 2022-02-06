@@ -24,9 +24,6 @@ class HawkerCentreTableViewController: UITableViewController {
                 self.tableView.reloadData() // Reload data once it loads
             }
         }
-        
-        // Always adopt a light interface style.
-        overrideUserInterfaceStyle = .dark
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,9 +57,6 @@ class HawkerCentreTableViewController: UITableViewController {
         else {
             cell.detailTextLabel?.text = "Market and Hawker Centre"
         }
-        
-        // Code to design the UI
-        cell.tintColor = UIColor.init(red: 223, green: 78, blue: 50, alpha: 1)
         
         return cell
     }
